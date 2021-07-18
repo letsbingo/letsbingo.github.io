@@ -368,11 +368,11 @@
           return false
         }
       }
-      // var update_cache = function () {
-      //   if (supports_html5_storage()) {
-      //     localStorage.setItem(item_id, $('#bingo-holder')[0].outerHTML)
-      //   }
-      // }
+      var update_cache = function () {
+        if (supports_html5_storage()) {
+          localStorage.setItem(item_id, $('#bingo-holder')[0].outerHTML)
+        }
+      }
 
       var uncheck_all = function () {
         $('.cross').css('opacity', 0)

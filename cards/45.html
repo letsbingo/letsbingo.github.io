@@ -68,7 +68,7 @@
         vertical-align: middle;
       }
       #loader-holder {
-        background-image: url(/../images/ajax-loader.gif);
+        background-image: url(../images/ajax-loader.gif);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 250px;
@@ -198,7 +198,7 @@
           @font-face {
             font-family: Gotham;
             font-display: swap;
-            src:url("font\\Gotham-Book.otf");
+            src:url("..\\font\\Gotham-Book.otf");
           }
           #zoom {
             font-size: 16px;
@@ -368,11 +368,11 @@
           return false
         }
       }
-      // var update_cache = function () {
-      //   if (supports_html5_storage()) {
-      //     localStorage.setItem(item_id, $('#bingo-holder')[0].outerHTML)
-      //   }
-      // }
+      var update_cache = function () {
+        if (supports_html5_storage()) {
+          localStorage.setItem(item_id, $('#bingo-holder')[0].outerHTML)
+        }
+      }
 
       var uncheck_all = function () {
         $('.cross').css('opacity', 0)
@@ -448,6 +448,7 @@
       $(document).ready(function () {
         init()
         $('.cross').click(function (event) {
+          console.log("cross click", $(this).css('opacity'));
           if ($(this).css('opacity') == '1')
             $(this).animate({ opacity: 0 }, 250, function () {
               update_cache()

@@ -1,0 +1,467 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      @media only screen {
+        html,
+        body {
+          background: #dbecf4;
+        }
+      }
+      @media only screen {
+        html,
+        body {
+          height: auto;
+        }
+        body {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      #bingo-holder {
+        clear: both;
+        width: 468px;
+        height: 560px;
+        margin: 0 auto 0;
+        background-repeat: no-repeat;
+        background-size: 468px;
+      }
+      .cross {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB94LAgwWBsXYx+MAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAOVBMVEUAAAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD+TVPmiymZAAAAEnRSTlMABAsQEyVDZGVsfYWZo66ztL83Z3pqAAAAAWJLR0QSe7xsAAAABEhJREFUeNrtnQl22kAQBQXGGGyDw/0vG8dLWLTN8mf69+tfB8hTlWQCGml6GIQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQNu21s/83pGNr/+e3y8fIU2v/iqsB2h/d3VeB42uD9/RR4evm4vD3j/b0U+Od/wRW48fdR4NsfVuDO30OBX39QgQd//gJXf0iBzftlxMGLP6DA6PyzXwP3/tUFJv2ZCzz6VxaY8ScucBgf6/sG789aYHz+q66Bqc8/6k/Caf/iAgvnn/MamPMvLLDiz1dg3r+owKo/XYHD0rFmfxIm+HMVWDr/BddAkj9TgTX/zAKJ/jwF1v2zCiT7sxRI8c8okOHPUSDNP7lAlj9DgVT/xAKZ/vbfCdP9kwrk+xtfAzn+CQUK/G0L5PmvFijyNy1wyD3WxQKF/nYFcs//SoFif6sCJf4LBZZ//xMWKPOfLVBx/m0KlPrPFKj071+g3H+yQLV/7wI1/hP3BwD+nxy9+I+ugarPvyuvOy/+DwUw5x+5It/c/+5o3fkPR+jx+vPfvUKO+OeTEPT339Efe878nX9sAZ/+uAJ7p/6wAn+8+sMKuPUnKmDkT1PAzJ+kgKE/RQFTf4ICxv7mBcz9jQsQ+JsWoPA3LEDib1aAxt+oAJG/SQEqf4MCZP7dC9D5dy5A6N+1AKV/xwKk/t0K0Pp3KkDs36UAtX+HAuT+zQvQ+zcu4MC/aQEX/g0LOPFvVsCNf6MCjvybFHDl36CAM394AXf+4AIO/aEFXPoDCzj1H4b9GeJ/3jv1j34FRP8MiP6/QPTvAdG/CUb/LRD912D0+wHR7whFvycY/a5w9HWB6CtD0dcGo68OR38+IPoTItGfEYr+lFj05wSjPyka/Vnh6E+LR39fIPobI9HfGYr+1lj09wajvzka/d3h6G+PR98/IPoOEtH3EAH5n70WiL6PUPSdpKLvJYY9Zn8F0EfsrQD+eH0VaHG0ngq0OVY/BUC7aY6O1E2BLWA/2VY7S/cpAN5RN2SBNrvL+ykwe4SgAu33164r0GbCxJWPl+3AXKDNjJFb/x577INnKwAL9JoxAJ6uASvQb8YCeL4KqEDPGRPgCTuQAuwzNtpMm7Pyh0/Zqi7APmenzcRJS3/4pL2qAuyzttpMnbX2h0/bLC5gN28PPG+1sAD7xMU2s8c5/OEzlwsKWM+dBU/dzi7APne34g6NmwnsSwWq7lAlFGCfvV15h261APv09eo7lCsFWPznCgDu0C4W4PGfLgC5Q71QgMl/qgDoDv1sAS7/cQHYCsVMATb/xwLAFZrJAnz+9wWgK1QTBRj9bwuAV+hGBTj9rwXgK5QPBVj9fws0WKG9K8Dr/12gyQr1TQFm/0+Op02Tf/d/AXL/Ydtqff6nALt/Q74KBPb/KhDafxg2p+MQm912EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCJPEX7vve6AkDdfcAAAAASUVORK5CYII=);
+        width: 73px;
+        height: 73px;
+        background-size: 73px;
+        padding: 0px 5px 0px 0px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      table {
+        margin: 0 auto;
+        position: relative;
+        top: 0px;
+      }
+
+      #nav {
+        position: static;
+        margin: 0px auto 8px;
+        width: 468px;
+        background: #f9f9f9;
+        padding: 5px 12px 2px;
+      }
+
+      .main {
+        height: 100%;
+        width: 100%;
+        display: table;
+        text-align: center;
+      }
+      .wrapper {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+      }
+      #loader-holder {
+        background-image: url(/../images/ajax-loader.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 250px;
+      }
+
+      .cross:hover {
+        cursor: pointer;
+      }
+      td {
+        padding-left: 5;
+        padding-right: 5;
+        margin: 0;
+        border: 0px none;
+      }
+
+      #nav td {
+        width: 20%;
+      }
+      #nav a {
+        text-decoration: none;
+        color: #333;
+        font-family: arial, sans;
+        font-size: 12px;
+      }
+      #nav a:hover {
+        text-decoration: underline;
+      }
+      #nav img {
+        width: 35px;
+        height: 28px;
+        padding: 0;
+        margin-bottom: -4px;
+      }
+
+      .print-image {
+        display: none;
+        width: 556px;
+        margin: 10px auto 0px;
+      }
+      .bingo-card-id,
+      .bingo-card-id-main,
+      .bingo-card-id-main a {
+        text-align: left;
+        font-family: monospace;
+        font-size: 18px;
+        color: #666;
+        text-decoration: none;
+      }
+      #new-card {
+        font-family: Gotham;
+        text-decoration: underline;
+      }
+      #new-card:hover {
+        color: #222;
+      }
+      .bingo-card-id-main {
+        width: 468px;
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 10px 10px 0;
+      }
+      .free-card-fixed .bingo-card-id-main,
+      .free-card-rand .bingo-card-id-main {
+        margin-bottom: 2px;
+      }
+      .bingo-card-id-main #new-card:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .fixed-only {
+        display: none;
+      }
+      .free-card-fixed .fixed-only {
+        display: inline;
+      }
+      .free-card-fixed .not-fixed {
+        display: none;
+      }
+
+      @media print {
+        html {
+          height: auto;
+          zoom: 0.7;
+          transform: rotate(90deg);
+        }
+        #nav {
+          display: none;
+        }
+        #ad-holder {
+          display: none;
+        }
+        html,
+        body {
+          background-color: white;
+        }
+        .print-image {
+          display: block;
+        }
+        img.print-image {
+          page-break-after: auto;
+        }
+        .main,
+        #new-card {
+          display: none;
+        }
+      }
+      .modal {
+        display: none;
+      }
+    </style>
+    <meta name="viewport" content="width=468, user-scalable=yes" />
+    <title>Bill'n'Fun Virtual Bingo</title>
+    <meta
+      name="description"
+      content="Colt Bill'n'Fun Virtual Bingo"
+    />
+  </head>
+  <body>
+    <div class="print-image bingo-card-id">Bingo Card ID 30</div>
+    <img class="print-image" src="../images/30.PNG" />
+    <div class="main">
+      <div class="wrapper free-card-rand">
+        <style>
+          @font-face {
+            font-family: Gotham;
+            font-display: swap;
+            src:url("font\\Gotham-Book.otf");
+          }
+          #zoom {
+            font-size: 16px;
+            padding: 2px;
+          }
+          .modal label {
+            cursor: pointer;
+            line-height: 2em;
+          }
+          button {
+            display: block;
+            margin: 0 auto;
+            font-weight: bold;
+            color: #fff;
+            font-family: arial;
+            background: #ff6666;
+            padding: 0 15px;
+            border: 0px none;
+            font-size: 14px;
+            height: 35px;
+          }
+          button:hover {
+            cursor: pointer;
+            background: #bf3b3b;
+          }
+          #remote-menu {
+            background: #003360;
+            color: #fff;
+            text-align: center;
+          }
+          #remote-menu div {
+            box-sizing: border-box;
+            padding: 10px 26px 10px 54px;
+            background-image: url('/../images/logo_mobile.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 25px;
+            min-height: 38px;
+            font-family: arial;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%;
+            max-width: 488px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: space-around;
+          }
+          @media only screen and (max-width: 600px) {
+            #zoom {
+              font-size: 18px;
+            }
+          }
+          @media only print {
+            .modal,
+            .blocker {
+              visibility: hidden;
+            }
+          }
+          html,
+          body {
+            padding: 0;
+            margin: 0;
+            font-family: arial;
+          }
+          @media only screen {
+            body {
+              background: #dbecf4;
+            }
+            html {
+              overflow-x: hidden;
+            }
+          }
+          #multi-holder {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .iframe-holder {
+            overflow: hidden;
+            padding: 10px 10px;
+            box-sizing: border-box;
+          }
+          iframe {
+            transform-origin: top left;
+            overflow: hidden;
+          }
+        </style>
+        <div class="bingo-card-id-main">
+            <span id="new-card">Reset</span>
+        </div>
+        <div id="loader-holder">
+          <div
+            id="bingo-holder"
+            style='background-image: url("../images/30.PNG"); padding-top: 100px;'
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                </tr>
+                <tr>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                </tr>
+                <tr>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                </tr>
+                <tr>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                </tr>
+                <tr>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                  <td><div class="cross" style="opacity: 0;"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script
+      defer=""
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <script type="text/javascript">
+      function pad_id (id) {
+        id = id + '' //force string
+        return ('000' + id).slice(-1 * Math.max(3, id.length))
+      }
+      var item_id = 'bhh' + window.location.pathname.replace(/\//g, '-')
+      var supports_html5_storage = function () {
+        try {
+          localStorage.setItem('test', 'test')
+          localStorage.removeItem('test')
+          return true
+        } catch (e) {
+          return false
+        }
+      }
+      var update_cache = function () {
+        if (supports_html5_storage()) {
+          localStorage.setItem(item_id, $('#bingo-holder')[0].outerHTML)
+        }
+      }
+
+      var uncheck_all = function () {
+        $('.cross').css('opacity', 0)
+      }
+
+      var init = function () {
+        //first uncheck all
+        uncheck_all()
+        var got_local = 0
+        if (supports_html5_storage()) {
+          if (localStorage.getItem(item_id)) {
+            got_local = 1
+            $('#bingo-holder').replaceWith(localStorage.getItem(item_id))
+
+            // $('img.print-image').attr(
+            //   'src',
+            //   $('#bingo-holder')
+            //     .css('background-image')
+            //     .replace('url(', '')
+            //     .replace(')', '')
+            //     .replace(/\"/gi, '')
+            //     .replace(/\'/gi, '')
+            // )
+            // if ($('#bingo-holder').attr('data-rnd-id') !== undefined) {
+              
+            // }
+          }
+        }
+        if (!got_local) {
+          var img_url = ''
+          // if (!img_url) {
+            // var rnd = Math.floor(Math.random() * 30) + 1
+            // var rnd_format = pad_id(rnd)
+            // img_url = 'mfbc.us/p/qb5rxc_' + rnd + '/m'
+          // }
+          // img_url = 'https://' + img_url
+          // $('#bingo-holder').css('background-image', 'url(' + img_url + ')')
+          // $('#bingo-holder').attr('data-rnd-id', rnd_format)
+          // $('img.print-image').attr('src', img_url)
+          // update_cache()
+        }
+      }
+
+      var hide_modal = function () {
+        $('.jquery-modal.blocker').trigger('click')
+      }
+
+      var regen_free = function () {
+        //clear all checkmarks
+        if (
+          confirm(
+            'This will clear your bingo card and allocate a new random bingo card.'
+          )
+        ) {
+          hide_modal()
+          if (supports_html5_storage()) {
+            localStorage.removeItem(item_id)
+          }
+          init()
+        }
+        return false
+      }
+
+      var reset_free = function () {
+        //clear all checkmarks
+        if (confirm('This will clear your bingo card.')) {
+          hide_modal() //may not even be visible
+          uncheck_all()
+          update_cache()
+        }
+      }
+
+      $(document).ready(function () {
+        init()
+        $('.cross').click(function (event) {
+          if ($(this).css('opacity') == '1')
+            $(this).animate({ opacity: 0 }, 250, function () {
+              update_cache()
+            })
+          else
+            $(this).animate({ opacity: 1 }, function () {
+              update_cache()
+            })
+        })
+        $('#new-card').click(function () {
+          reset_free()
+          return false
+        })
+      })
+    </script>
+  </body>
+</html>
