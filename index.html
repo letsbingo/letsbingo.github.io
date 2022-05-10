@@ -35,6 +35,7 @@
     <link rel="stylesheet preload" as="style" media="screen" href="assets/css/lightgallery.min.css">
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet preload" as="style" media="screen" href="assets/css/theme.min.css">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
     <style>
       @font-face {
           font-family: Marvelous-Script-Demo;
@@ -50,13 +51,31 @@
           color: #ffc602;
           font-display: swap;
       }
+      html {
+          overflow: scroll;
+          overflow-x: hidden;
+      }
+      ::-webkit-scrollbar {
+          width: 0;  /* Remove scrollbar space */
+          background: transparent;  /* Optional: just make scrollbar invisible */
+      }
+      /* Optional: show position indicator in red */
+      ::-webkit-scrollbar-thumb {
+          background: #FF0000;
+      }
       * {
             font-family: 'Ubuntu', sans-serif;
             font-display: swap;
-            overflow: hidden;
         }
       .navbar {
         background-color: #3c3c3c;
+      }
+      
+      @keyframes blinker {
+        50% {
+          opacity: 50;
+          color: #ffc602;
+        }
       }
       </style>
     <script src="assets/js/style.js"></script>
@@ -224,7 +243,20 @@
           }
         
           return result;
-        }
+        };
+
+        $(document).ready(function() {
+            $("#start").click(function(){
+              num = randomUniqueNum(75, 75);
+              for (let i = 1; i < num.length; i++) {
+                setTimeout(function timer() {
+                  $("div").filter(function() {
+                      return $(this).text() === String(num[i]);
+                  }).css('animation', 'blinker 1s linear infinite');
+                }, i * 3000);
+              }
+            }); 
+        });
 
       </script>
   </body>
