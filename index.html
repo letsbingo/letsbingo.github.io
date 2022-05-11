@@ -44,9 +44,9 @@
       }
       .logo-text {
           font-family: Marvelous-Script-Demo;
-          font-size: 220%;
+          font-size: 200%;
           width: 100%;
-          height: auto;
+          margin: 0 auto;
           text-align: center;
           color: #ffc602;
           font-display: swap;
@@ -88,27 +88,19 @@
     <div id="root">
       <div>
         <div class="dark-bg light-links">
-          <header class="cs-header navbar navbar-expand-lg navbar-box-shadow navbar-sticky" data-scroll-header="">
-            <div class="container px-0 px-xl-3">
-                <a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/">
-                  <p class="logo-text">Let's Play Bingo</p>
-                <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
-                    <div class="cs-offcanvas-body">
-                        <!-- Menu-->
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="/contact">About</a></li>
-                            <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="/blog">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
+          <header style="background-color: #3c3c3c;">
+            <div class="container row align-center">
+              <div class="">
+                <a href="/"><p class="logo-text" align="left">Let's Play Bingo</p></a>
+              </div>
             </div>
-        </header>
+          </header>
           <section class="board-block">
-            <div class="row no-wrap align-stretch">
+            <div class="container row no-wrap align-stretch" style="margin:0 auto;">
               <div class="col board-side">
                 <div id="board" class="flex">
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter white-bg red-text">B</div>
+                  <div class="row no-wrap set-size text-center notranslate" >
+                    <div class="col board-letter dark-bg red-text">B</div>
                     <div class="col ball">1</div>
                     <div class="col ball">2</div>
                     <div class="col ball">3</div>
@@ -125,8 +117,8 @@
                     <div class="col ball">14</div>
                     <div class="col ball">15</div>
                   </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter white-bg red-text">I</div>
+                  <div class="row no-wrap set-size text-center notranslate" >
+                    <div class="col board-letter dark-bg red-text">I</div>
                     <div class="col ball">16</div>
                     <div class="col ball">17</div>
                     <div class="col ball">18</div>
@@ -143,8 +135,8 @@
                     <div class="col ball">29</div>
                     <div class="col ball">30</div>
                   </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter white-bg red-text">N</div>
+                  <div class="row no-wrap set-size text-center notranslate" >
+                    <div class="col board-letter dark-bg red-text">N</div>
                     <div class="col ball">31</div>
                     <div class="col ball">32</div>
                     <div class="col ball">33</div>
@@ -161,8 +153,8 @@
                     <div class="col ball">44</div>
                     <div class="col ball">45</div>
                   </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter white-bg red-text">G</div>
+                  <div class="row no-wrap set-size text-center notranslate" >
+                    <div class="col board-letter dark-bg red-text">G</div>
                     <div class="col ball">46</div>
                     <div class="col ball">47</div>
                     <div class="col ball">48</div>
@@ -179,8 +171,8 @@
                     <div class="col ball">59</div>
                     <div class="col ball">60</div>
                   </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter white-bg red-text">O</div>
+                  <div class="row no-wrap set-size text-center notranslate" >
+                    <div class="col board-letter dark-bg red-text">O</div>
                     <div class="col ball">61</div>
                     <div class="col ball">62</div>
                     <div class="col ball">63</div>
@@ -201,26 +193,18 @@
               </div>
             </div>
           </section>
-          <section class="navbar padding-sm">
-            <div class="col pattern-side shrink min-size-200 padding-xlg">
-              <div
-                class="row no-wrap margin-bottom-lg justify-space-between white-text"
-              >
-                <div class="col text-center margin-sm">
-                  <button id="start" data-disabled="false">Start New Game</button>
-                </div>
-                <div class="col text-center margin-sm">
-                  <div class="callNumber notranslate">
-                    <div><span>&nbsp;</span><span>0</span></div>
+          <section class="game-controls dark-bg navbar padding-sm">
+            <div class="container row justify-start align-start">
+              <div class="col shrink padding-vertical-xxlg padding-horizontal-md">
+                <section class="gameplay-controls">
+                  <div data-disabled="false">
+                    <button data-disabled="false">Start New Game</button>
+                    <div><b><h2 id="previous" style="color: #ffc602;"></h2></b></div>
+                    <div class="callNumber-text uppercase">Previous Call</div>
                   </div>
+                  <div><h2 id="total" style="color: #ffc602;"></h2></div>
                   <div class="callNumber-text uppercase">Total Calls</div>
-                </div>
-                <div class="col text-center margin-sm">
-                  <div class="callNumber notranslate">
-                    <div><span>&nbsp;</span><span>0</span></div>
-                  </div>
-                  <div class="callNumber-text uppercase">Previous Call</div>
-                </div>
+                </section>
               </div>
             </div>
           </section>
@@ -244,18 +228,40 @@
         
           return result;
         };
-
         $(document).ready(function() {
-            $("#start").click(function(){
-              num = randomUniqueNum(75, 75);
-              for (let i = 1; i < num.length; i++) {
+          $("#start").click(function(){
+            $("#start").attr("disabled", true);
+            num = randomUniqueNum(75, 75);
+            for (let i = 1; i < num.length; i++) {
+              new Promise(function(resolve) { 
                 setTimeout(function timer() {
                   $("div").filter(function() {
-                      return $(this).text() === String(num[i]);
+                    return $(this).text() === String(num[i]);
                   }).css('animation', 'blinker 1s linear infinite');
-                }, i * 3000);
-              }
+                  var msg = new SpeechSynthesisUtterance();
+                  msg.text = String(num[i]);
+                  window.speechSynthesis.speak(msg);
+                  setTimeout(function() {
+                    window.speechSynthesis.speak(msg);
+                  }, 4000);
+                  setTimeout(function() {
+                    window.speechSynthesis.speak(msg);
+                  }, 9000);
+                  setTimeout(() => {
+                    $("div").filter(function() {
+                      return $(this).text() === String(num[i]);
+                    }).css({"animation": "none", "color": "black"});
+                  }, 10000);
+                  if (i != 1) {
+                    $("#previous").text(String(num[i-1]));
+                  }
+                  $("#total").text(String(i));
+                }, i * 10000);
+              });
+            }
+          });
             }); 
+          });
         });
 
       </script>

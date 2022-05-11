@@ -650,7 +650,8 @@ span.tag.bugfix {
 }
 
 .board-block .board-side #board .ball {
-    color: #3c3c3c
+    color: #3c3c3c;
+    align-self: center;
 }
 
 .board-block .board-side #board .ball button {
