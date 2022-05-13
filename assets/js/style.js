@@ -17431,11 +17431,11 @@
                             }
                             r.state.wildBingo ? r.state.enableCaller && r.state.extraTalk ? (r.say("Let's Play Wild Bingo!"), window.setTimeout((function () {
                                 r.startWildBingo()
-                            }), 2e3)) : r.startWildBingo() : r.state.enableCaller && r.state.extraTalk ? (r.say("Let's Play Bingo!"), window.setTimeout((function () {
+                            }), 2e3)) : r.startWildBingo() : r.state.enableCaller && r.state.extraTalk ? (r.say("Let's Bingo!"), window.setTimeout((function () {
                                 r.callBingoNumber()
                             }), 2e3)) : r.callBingoNumber()
                         }, r.startNewAutoplayGame = function () {
-                            r.state.wildBingo ? r.startNewGame() : r.state.enableCaller && r.state.extraTalk ? (r.say("Let's Play Bingo!"), window.setTimeout((function () {
+                            r.state.wildBingo ? r.startNewGame() : r.state.enableCaller && r.state.extraTalk ? (r.say("Let's Bingo!"), window.setTimeout((function () {
                                 r.toggleGame()
                             }), 2e3)) : r.toggleGame()
                         }, r.startWildBingo = function () {
@@ -18135,7 +18135,7 @@
                                         className: "ball-content",
                                         children: (0, Ji.jsx)("img", {
                                             src: de,
-                                            alt: "Lets Play Bingo Logo"
+                                            alt: "Lets Bingo Logo"
                                         })
                                     })
                                 })
@@ -18689,11 +18689,11 @@
                                             className: "col min-size-300 grow padding-vertical-xxlg padding-horizontal-lg white-text",
                                             children: [(0, Ji.jsx)("h4", {
                                                 className: "no-margin",
-                                                children: "Donate to Let's Play Bingo!"
+                                                children: "Donate to Let's Bingo!"
                                             }), (0, Ji.jsxs)("p", {
                                                 className: "wrap-text small-text",
                                                 children: [(0, Ji.jsx)("strong", {
-                                                    children: "Let's Play Bingo is the #1 Bingo Caller on Google!"
+                                                    children: "Let's Bingo is the #1 Bingo Caller on Google!"
                                                 }), (0, Ji.jsx)("br", {}), "Requiring no downloads, and with no ads, it is completely ", (0, Ji.jsx)("strong", {
                                                     children: "free"
                                                 }), " and always will be. If you'd like to contribute toward operating costs we are accepting ", (0, Ji.jsx)("a", {
@@ -18749,7 +18749,7 @@
                                             }), "!"]
                                         }), (0, Ji.jsxs)("p", {
                                             children: [(0, Ji.jsx)("em", {
-                                                children: "Thank you so much to those who have donated towards operating costs and who have reached out to me to tell me how much they enjoy this bingo caller. I love hearing from you! It makes me very happy to hear that a little project I started for myself in honor of my late grandmother is enjoyed by so many other people. My mom, grandma and I used to play bingo together using a little electronic bingo caller. It was always just a bit off and never worked quite right. We also found ourselves wishing it had other features or a bigger display. So in honor of Grandma Jo, in 2017 Let's Play Bingo was born!"
+                                                children: "Thank you so much to those who have donated towards operating costs and who have reached out to me to tell me how much they enjoy this bingo caller. I love hearing from you! It makes me very happy to hear that a little project I started for myself in honor of my late grandmother is enjoyed by so many other people. My mom, grandma and I used to play bingo together using a little electronic bingo caller. It was always just a bit off and never worked quite right. We also found ourselves wishing it had other features or a bigger display. So in honor of Grandma Jo, in 2017 Let's Bingo was born!"
                                             }), (0, Ji.jsx)("br", {}), "- Karol"]
                                         }), (0, Ji.jsx)("section", {
                                             className: "padding-top-sm dark-blue-bg"
@@ -18759,9 +18759,9 @@
                                             children: ["Past release notes can be accessed here: ", (0, Ji.jsx)("a", {
                                                 href: "/releases",
                                                 children: "Release Notes"
-                                            }), (0, Ji.jsx)("br", {}), "Have ideas for how to make Let's Play Bingo even better? Send a message to ", (0, Ji.jsx)("a", {
-                                                href: "mailto:hello@letsplaybingo.io",
-                                                children: "hello@letsplaybingo.io"
+                                            }), (0, Ji.jsx)("br", {}), "Have ideas for how to make Let's Bingo even better? Send a message to ", (0, Ji.jsx)("a", {
+                                                href: "mailto:hello@letsbingo.io",
+                                                children: "hello@letsbingo.io"
                                             }), "!"]
                                         }), (0, Ji.jsx)("h4", {
                                             className: "margin-bottom-none",
@@ -18779,7 +18779,7 @@
                                         }), (0, Ji.jsx)("h2", {
                                             children: "Gameplay"
                                         }), (0, Ji.jsx)("p", {
-                                            children: "Let's Play Bingo is intended for use at home or through screen sharing technologies. It does not have a database so games are not saved/stored / you can't access the same game on multiple computers as it is strictly played in the user's browser. This could potentially change in the future based on demand for this kind of feature. LPB was created with the idea of Family Game Night, printing out physical cards and playing with loved ones. "
+                                            children: "Let's Bingo is intended for use at home or through screen sharing technologies. It does not have a database so games are not saved/stored / you can't access the same game on multiple computers as it is strictly played in the user's browser. This could potentially change in the future based on demand for this kind of feature. LPB was created with the idea of Family Game Night, printing out physical cards and playing with loved ones. "
                                         }), (0, Ji.jsx)("h3", {
                                             children: "Crazy Patterns"
                                         }), (0, Ji.jsx)("p", {
@@ -18789,10 +18789,10 @@
                                         }), (0, Ji.jsx)("h2", {
                                             children: "Audible Bingo Caller"
                                         }), (0, Ji.jsx)("p", {
-                                            children: "Let's Play Bingo utilizes the Web Speech Synthesis API which is an experiemental technology used to generate text-to-speech. This is primarily used for screen readers to read text back to blind people. Support depends on your device as well as your browser. If speech synthesis is not supported you will receive a message indiciating as much and the \"Enable Caller\" game mode will not be available for you. Please try another browser or different device if you'd like to use this feature."
+                                            children: "Let's Bingo utilizes the Web Speech Synthesis API which is an experiemental technology used to generate text-to-speech. This is primarily used for screen readers to read text back to blind people. Support depends on your device as well as your browser. If speech synthesis is not supported you will receive a message indiciating as much and the \"Enable Caller\" game mode will not be available for you. Please try another browser or different device if you'd like to use this feature."
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["If speech synthesis is available on your device/browser you ought to be able to see a list of voices that are available for use. The voice selections available to you can vary greatly depending on what device you are on and what the manufacturer has made available for that device. ", (0, Ji.jsx)("strong", {
-                                                children: "This is not something controlled by the Let's Play Bingo application."
+                                                children: "This is not something controlled by the Let's Bingo application."
                                             })]
                                         }), (0, Ji.jsx)("h3", {
                                             children: "Double Call Mode"
@@ -18805,7 +18805,7 @@
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["When enabled Chatty mode will enable additional chatter from the audible caller. ", (0, Ji.jsx)("em", {
                                                 children: "For example:"
-                                            }), ' at the start of every game the caller will say "Let\'s Play Bingo!" or if using the Wild Bingo game mode, "Let\'s Play Wild Bingo!".']
+                                            }), ' at the start of every game the caller will say "Let\'s Bingo!" or if using the Wild Bingo game mode, "Let\'s Play Wild Bingo!".']
                                         }), (0, Ji.jsx)("section", {
                                             className: "padding-top-sm dark-blue-bg"
                                         }), (0, Ji.jsx)("h2", {
@@ -18869,9 +18869,9 @@
                                 className: "padding-xxlg pale-gray-bg",
                                 children: [(0, Ji.jsx)("h1", {
                                     className: "no-margin",
-                                    children: "Donate to Let's Play Bingo!"
+                                    children: "Donate to Let's Bingo!"
                                 }), (0, Ji.jsxs)("p", {
-                                    children: ["Let's Play Bingo is completely ", (0, Ji.jsx)("strong", {
+                                    children: ["Let's Bingo is completely ", (0, Ji.jsx)("strong", {
                                         children: "free"
                                     }), " and always will be. If you'd like to contribute toward operating costs we are accepting donations of any amount via Venmo or Paypal!"]
                                 }), (0, Ji.jsxs)("div", {
@@ -19223,9 +19223,9 @@
                                         }), (0, Ji.jsx)("h2", {
                                             children: "AGREEMENT TO TERMS"
                                         }), (0, Ji.jsxs)("p", {
-                                            children: ['These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (\u201cyou\u201d) and A Girl Created This LLC D/B/A  ("doing business as") Let\'s Play Bingo ("Company", \u201cwe\u201d, \u201cus\u201d, or \u201cour\u201d), concerning your access to and use of the ', (0, Ji.jsx)("a", {
-                                                href: "https://www.letsplaybingo.io",
-                                                children: "https://www.letsplaybingo.io"
+                                            children: ['These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (\u201cyou\u201d) and A Girl Created This LLC D/B/A  ("doing business as") Let\'s Bingo ("Company", \u201cwe\u201d, \u201cus\u201d, or \u201cour\u201d), concerning your access to and use of the ', (0, Ji.jsx)("a", {
+                                                href: "https://www.letsbingo.io",
+                                                children: "https://www.letsbingo.io"
                                             }), " website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the \u201cSite\u201d). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY."]
                                         }), (0, Ji.jsx)("p", {
                                             children: "Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms of Use at any time and for any reason. We will alert you about any changes by updating the \u201cLast updated\u201d date of these Terms of Use, and you waive any right to receive specific notice of each such change. It is your responsibility to periodically review these Terms of Use to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms of Use by your continued use of the Site after the date such revised Terms of Use are posted."
@@ -19340,7 +19340,7 @@
                                         }), (0, Ji.jsx)("h2", {
                                             children: "PRIVACY POLICY"
                                         }), (0, Ji.jsx)("p", {
-                                            children: "We care about data privacy and security. Please review our Privacy Policy: https://www.letsplaybingo.io/privacy. By using the Site, you agree to be bound by our Privacy Policy, which is incorporated into these Terms of Use. Please be advised the Site is hosted in the United States. If you access the Site from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Site, you are transferring your data to the United States, and you agree to have your data transferred to and processed in the United States. Further, we do not knowingly accept, request, or solicit information from children or knowingly market to children. Therefore, in accordance with the U.S. Children\u2019s Online Privacy Protection Act, if we receive actual knowledge that anyone under the age of 13 has provided personal information to us without the requisite and verifiable parental consent, we will delete that information from the Site as quickly as is reasonably practical."
+                                            children: "We care about data privacy and security. Please review our Privacy Policy: https://www.letsbingo.io/privacy. By using the Site, you agree to be bound by our Privacy Policy, which is incorporated into these Terms of Use. Please be advised the Site is hosted in the United States. If you access the Site from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Site, you are transferring your data to the United States, and you agree to have your data transferred to and processed in the United States. Further, we do not knowingly accept, request, or solicit information from children or knowingly market to children. Therefore, in accordance with the U.S. Children\u2019s Online Privacy Protection Act, if we receive actual knowledge that anyone under the age of 13 has provided personal information to us without the requisite and verifiable parental consent, we will delete that information from the Site as quickly as is reasonably practical."
                                         }), (0, Ji.jsx)("h2", {
                                             children: "TERM AND TERMINATION"
                                         }), (0, Ji.jsx)("p", {
@@ -19392,8 +19392,8 @@
                                         }), (0, Ji.jsx)("strong", {
                                             children: "A Girl Created This LLC"
                                         }), (0, Ji.jsx)("br", {}), (0, Ji.jsx)("a", {
-                                            href: "mailto:hello@letsplaybingo.io",
-                                            children: "hello@letsplaybingo.io"
+                                            href: "mailto:hello@letsbingo.io",
+                                            children: "hello@letsbingo.io"
                                         })]
                                     })
                                 })
@@ -19422,14 +19422,14 @@
                                         }), (0, Ji.jsx)("h5", {
                                             children: "Last updated 4/25/2020"
                                         }), (0, Ji.jsxs)("p", {
-                                            children: ['Thank you for choosing to be part of our community at A Girl Created This LLC D/B/A ("doing business as") Let\'s Play Bingo (\u201cCompany\u201d, \u201cwe\u201d, \u201cus\u201d, or \u201cour\u201d). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at ', (0, Ji.jsx)("a", {
-                                                href: "mailto:hello@letsplaybingo.io",
-                                                children: "hello@letsplaybingo.io"
+                                            children: ['Thank you for choosing to be part of our community at A Girl Created This LLC D/B/A ("doing business as") Let\'s Bingo (\u201cCompany\u201d, \u201cwe\u201d, \u201cus\u201d, or \u201cour\u201d). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at ', (0, Ji.jsx)("a", {
+                                                href: "mailto:hello@letsbingo.io",
+                                                children: "hello@letsbingo.io"
                                             }), "."]
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["When you visit our ", (0, Ji.jsx)("a", {
-                                                href: "https://www.letsplaybingo.io",
-                                                children: "https://www.letsplaybingo.io"
+                                                href: "https://www.letsbingo.io",
+                                                children: "https://www.letsbingo.io"
                                             }), " website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the \u201cSite\u201d) and use our services, you trust us with your personal information. We take your privacy very seriously. In this privacy policy, we seek to explain to you in the clearest way possible what information we collect, how we use it and what rights you have in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy policy that you do not agree with, please discontinue use of our and our services."]
                                         }), (0, Ji.jsx)("p", {
                                             children: 'This privacy policy applies to all information collected through our and/or any related services, sales, marketing or events (we refer to them collectively in this privacy policy as the "Services").'
@@ -19477,7 +19477,7 @@
                                         }), (0, Ji.jsx)("p", {
                                             children: "In short, we may use cookies and other tracking technologies to collect and store your information."
                                         }), (0, Ji.jsx)("p", {
-                                            children: 'To be specific, Let\'s Play Bingo only uses localStorage technologies which are strings of text stored in your browser to save information about your gameplay preferences and game data. These "cookies" do not expire, but if you clear your cookies in your browser they will disappear. We do not have a database, and we do not store information on any servers. When you visit our Site, we will send a request to your browser to check for these strings of text. If they exist we will retrieve them so we can resume your game or restore your preferences. This is not personal information about you, nor does it allow us to access personal information about you. It is strictly to improve your experience on the Site.'
+                                            children: 'To be specific, Let\'s Bingo only uses localStorage technologies which are strings of text stored in your browser to save information about your gameplay preferences and game data. These "cookies" do not expire, but if you clear your cookies in your browser they will disappear. We do not have a database, and we do not store information on any servers. When you visit our Site, we will send a request to your browser to check for these strings of text. If they exist we will retrieve them so we can resume your game or restore your preferences. This is not personal information about you, nor does it allow us to access personal information about you. It is strictly to improve your experience on the Site.'
                                         }), (0, Ji.jsx)("h2", {
                                             children: "Is your information transferred internationally?"
                                         }), (0, Ji.jsx)("p", {
@@ -19514,8 +19514,8 @@
                                             children: "In Short:  We do not knowingly collect data from or market to children under 18 years of age."
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["We do not knowingly solicit data from or market to children under 18 years of age. By using the , you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent\u2019s use of the . If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we have collected from children under age 18, please contact us at ", (0, Ji.jsx)("a", {
-                                                href: "mailto:hello@letsplaybingo.io",
-                                                children: "hello@letsplaybingo.io"
+                                                href: "mailto:hello@letsbingo.io",
+                                                children: "hello@letsbingo.io"
                                             }), "."]
                                         }), (0, Ji.jsx)("h2", {
                                             children: "What are your privacy rights?"
@@ -19550,15 +19550,15 @@
                                             children: "How can you contact us about this policy?"
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["If you have questions or comments about this policy, you may email us at ", (0, Ji.jsx)("a", {
-                                                href: "mailto:hello@letsplaybingo.io",
-                                                children: "hello@letsplaybingo.io"
+                                                href: "mailto:hello@letsbingo.io",
+                                                children: "hello@letsbingo.io"
                                             }), "."]
                                         }), (0, Ji.jsx)("h2", {
                                             children: "How can you review, update, or delete the data we collect from you?"
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["We do not collect data from you. But if you'd like for us to delete any emails you've sent to us or anything of that nature, please email us at ", (0, Ji.jsx)("a", {
-                                                href: "mailto:hello@letsplaybingo.io",
-                                                children: "hello@letsplaybingo.io"
+                                                href: "mailto:hello@letsbingo.io",
+                                                children: "hello@letsbingo.io"
                                             }), " and we will respond to your request within 30 days. As for third party applications please review their policies here: "]
                                         }), (0, Ji.jsxs)("p", {
                                             children: ["Add This: ", (0, Ji.jsx)("a", {
@@ -19602,7 +19602,7 @@
                                 className: "tell-your-friends padding-lg",
                                 children: [(0, Ji.jsx)("h3", {
                                     className: "margin-top-none margin-bottom-md",
-                                    children: "Love Let's Play Bingo? Tell your friends!"
+                                    children: "Love Let's Bingo? Tell your friends!"
                                 }), (0, Ji.jsx)("div", {
                                     className: "addthis_inline_share_toolbox"
                                 })]
@@ -19749,7 +19749,7 @@
                                                 })]
                                             }), (0, Ji.jsxs)("li", {
                                                 children: ["New design and layout!", (0, Ji.jsx)("p", {
-                                                    children: "The new layout and design optimizes the available space when sharing or projecting to a big screen, making playing Let's Play Bingo with your friends and family that much easier!"
+                                                    children: "The new layout and design optimizes the available space when sharing or projecting to a big screen, making playing Let's Bingo with your friends and family that much easier!"
                                                 })]
                                             }), (0, Ji.jsxs)("li", {
                                                 children: ["New patterns and number skipping!", (0, Ji.jsxs)("p", {
@@ -19778,7 +19778,7 @@
                                     to: "/",
                                     children: (0, Ji.jsx)("img", {
                                         src: de,
-                                        alt: "Let's Play Bingo!",
+                                        alt: "Let's Bingo!",
                                         className: "logo"
                                     })
                                 })
@@ -19793,7 +19793,7 @@
                                         })
                                     }), (0, Ji.jsx)("li", {
                                         children: (0, Ji.jsx)("a", {
-                                            href: "https://classic.letsplaybingo.io",
+                                            href: "https://classic.letsbingo.io",
                                             children: "Classic"
                                         })
                                     }), (0, Ji.jsx)("li", {
@@ -19890,10 +19890,10 @@
                                     }), (0, Ji.jsxs)("p", {
                                         className: "small-text",
                                         children: ["If you come across any issues with the game, please submit a detailed report either via email to ", (0, Ji.jsx)("a", {
-                                            href: "mailto:hello@letsplaybingo.io",
-                                            children: "hello@letsplaybingo.io"
+                                            href: "mailto:hello@letsbingo.io",
+                                            children: "hello@letsbingo.io"
                                         }), " or via ", (0, Ji.jsx)("a", {
-                                            href: "https://github.com/karolbrennan/letsplaybingo/issues",
+                                            href: "https://github.com/karolbrennan/letsbingo/issues",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
                                             children: "GitHub"
@@ -19914,8 +19914,8 @@
                             }), (0, Ji.jsxs)("div", {
                                 className: "col text-center",
                                 children: ["\xa9 2017 - ", (new Date).getFullYear(), " ", (0, Ji.jsx)("a", {
-                                    href: "mailto:hello@letsplaybingo.io",
-                                    children: "Let's Play Bingo"
+                                    href: "mailto:hello@letsbingo.io",
+                                    children: "Let's Bingo"
                                 })]
                             }), (0, Ji.jsxs)("div", {
                                 className: "col text-right",

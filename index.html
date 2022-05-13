@@ -10,7 +10,7 @@
       content="bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board"
     />
     <meta name="author" content="Aditya Karnik" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="twitter:site" content="@aditya-karnik" />
     <link
@@ -28,7 +28,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="shortcut icon" href="/favicon.svg" />
-    <title>Let's Play Bingo! | Free Online Bingo Caller</title>
+    <title>Let's Bingo! | Free Online Bingo Caller</title>
     <!-- Vendor Styles-->
     <link rel="stylesheet preload" as="style" media="screen" href="assets/css/simplebar.min.css">
     <link rel="stylesheet preload" as="style" media="screen" href="assets/css/tiny-slider.css">
@@ -54,6 +54,17 @@
       html {
           overflow: scroll;
           overflow-x: hidden;
+          height: 100%;
+      }
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        min-height: 100%;
+      }
+      #root {
+        min-height: 100%;
       }
       ::-webkit-scrollbar {
           width: 0;  /* Remove scrollbar space */
@@ -77,6 +88,80 @@
           color: #ffc602;
         }
       }
+      /* Smartphones (portrait and landscape) ----------- */
+      @media only screen 
+      and (min-device-width : 320px) 
+      and (max-device-width : 480px) {
+      /* Styles */
+      }
+
+      /* Smartphones (landscape) ----------- */
+      @media only screen 
+      and (min-width : 321px) {
+      /* Styles */
+      }
+
+      /* Smartphones (portrait) ----------- */
+      @media only screen 
+      and (max-width : 320px) {
+      /* Styles */
+      }
+
+      /* iPads (portrait and landscape) ----------- */
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) {
+      /* Styles */
+      }
+
+      /* iPads (landscape) ----------- */
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : landscape) {
+      /* Styles */
+      }
+
+      /* iPads (portrait) ----------- */
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : portrait) {
+      /* Styles */
+      }
+
+      /* Desktops and laptops ----------- */
+      @media only screen 
+      and (min-width : 1224px) {
+      /* Styles */
+      }
+
+      /* Large screens ----------- */
+      @media only screen 
+      and (min-width : 1824px) {
+      /* Styles */
+      }
+
+      /* iPhone 4 ----------- */
+      @media
+      only screen and (-webkit-min-device-pixel-ratio : 1.5),
+      only screen and (min-device-pixel-ratio : 1.5) {
+      /* Styles */
+      }
+      /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
+      @media screen and (min-width: 1024px){
+      /*Style*/
+      }
+
+      /*###Tablet(medium)###*/
+      @media screen and (min-width : 768px) and (max-width : 1023px){
+      /*Style*/
+      }
+
+      /*### Smartphones (portrait and landscape)(small)### */
+      @media screen and (min-width : 0px) and (max-width : 767px){
+      /*Style*/
+      }
       </style>
     <script src="assets/js/style.js"></script>
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -87,11 +172,19 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div>
-        <div class="dark-bg light-links">
+        <div class="dark-bg light-links" style="min-height: 100%;">
           <header style="background-color: #3c3c3c;">
             <div class="container row align-center">
-              <div class="">
-                <a href="/"><p class="logo-text" align="left">Let's Play Bingo</p></a>
+              <div>
+                <a href="/"><p class="logo-text">Let's Bingo</p></a>
+              </div>
+              <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                <a class="btn btn-secondary" href="#" target="_blank" rel="noopener" style="margin-right: 5%;">
+                  <i ></i>How<span class="d-none d-lg-inline"> to Play</span>
+                </a>
+                <a class="btn btn-secondary" href="https://github.com/adityaskarnik" target="_blank" rel="noopener">
+                  <i ></i>C<span class="d-none d-lg-inline">reator</span>
+                </a>
               </div>
             </div>
           </header>
@@ -99,7 +192,7 @@
             <div class="container row no-wrap align-stretch" style="margin:0 auto;">
               <div class="col board-side">
                 <div id="board" class="flex">
-                  <div class="row no-wrap set-size text-center notranslate" >
+                  <div class="row no-wrap set-size text-center notranslate">
                     <div class="col board-letter dark-bg red-text">B</div>
                     <div class="col ball">1</div>
                     <div class="col ball">2</div>
@@ -194,16 +287,16 @@
             </div>
           </section>
           <section class="game-controls dark-bg navbar padding-sm">
-            <div class="container row justify-start align-start">
-              <div class="col shrink padding-vertical-xxlg padding-horizontal-md">
-                <section class="gameplay-controls">
-                  <div data-disabled="false">
-                    <button data-disabled="false">Start New Game</button>
-                    <div><b><h2 id="previous" style="color: #ffc602;"></h2></b></div>
-                    <div class="callNumber-text uppercase">Previous Call</div>
+            <div class="container row justify-center align-center">
+              <div class="">
+                <section>
+                  <div data-disabled="false" style="text-align: center;">
+                    <button type="button" data-disabled="false" id="start" style="text-align: center;">Start New Game</button>
+                    <div><b><h2 id="previous" style="color: #ffc602; text-align: center;"></h2></b></div>
+                    <div class="callNumber-text uppercase" style="text-align: center">Previous Call</div>
                   </div>
-                  <div><h2 id="total" style="color: #ffc602;"></h2></div>
-                  <div class="callNumber-text uppercase">Total Calls</div>
+                  <div><h2 id="total" style="color: #ffc602; text-align: center"></h2></div>
+                  <div class="callNumber-text uppercase" style="text-align: center">Total Calls</div>
                 </section>
               </div>
             </div>
@@ -231,10 +324,18 @@
         $(document).ready(function() {
           $("#start").click(function(){
             $("#start").attr("disabled", true);
+            for (let i=10; i > 0; i--) {
+              setTimeout(() => {
+                $("#start").html("Starting...")
+                $("#start").css('animation', 'blinker 1s linear infinite');
+              }, 1000);
+            }
             num = randomUniqueNum(75, 75);
             for (let i = 1; i < num.length; i++) {
               new Promise(function(resolve) { 
                 setTimeout(function timer() {
+                  $("#start").html("Start New Game")
+                  $("#start").css('animation', 'none');
                   $("div").filter(function() {
                     return $(this).text() === String(num[i]);
                   }).css('animation', 'blinker 1s linear infinite');
@@ -259,8 +360,6 @@
                 }, i * 10000);
               });
             }
-          });
-            }); 
           });
         });
 

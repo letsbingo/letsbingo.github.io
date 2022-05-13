@@ -256,7 +256,7 @@ span.tag.bugfix {
     .board-block .board-side #board .row,
     .board-block .pattern-side #board .row {
         display: inline-block;
-        width: 20%
+        /* width: 20% */
     }
 
     .board-block .board-side #bingopattern,
@@ -281,7 +281,10 @@ span.tag.bugfix {
 }
 
 .flex {
-    display: flex
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media screen and (min-width:816px) {
@@ -291,11 +294,11 @@ span.tag.bugfix {
 }
 
 .row {
-    align-content: stretch;
-    align-items: stretch;
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .row.vertical {
@@ -625,10 +628,10 @@ span.tag.bugfix {
 }
 
 .board-block .board-side #board {
-    align-self: stretch;
+    align-self: center;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    
     padding: 1rem
 }
 
