@@ -93,8 +93,10 @@
       .navbar {
         background-color: #3c3c3c;
       }
-      
-      a { color: inherit; } 
+
+      a {
+        color: inherit;
+      }
 
       @keyframes blinker {
         50% {
@@ -176,6 +178,14 @@
               <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
                 <a
                   class="btn btn-secondary"
+                  href="/#generate-cards"
+                  data-scroll
+                  style="margin-right: 5%;"
+                >
+                  <i></i>G<span class="d-none d-lg-inline">enerate Cards</span>
+                </a>
+                <a
+                  class="btn btn-secondary"
                   href="/"
                   target="_blank"
                   rel="noopener"
@@ -197,10 +207,10 @@
           <section class="board-block">
             <div class="container no-wrap align-stretch" style="margin:0 auto;">
               <div class="row justify-content-center">
-                <div class="col-lg-4 pt-2 pt-lg-5 pb-lg-5 order-lg-1">
-                  <p class="h2 pt-4 pt-md-5 mt-2">Basic Idea of the Game</p>
+                <div class="col-lg-4 pt-lg-5 pb-lg-5 order-lg-1">
+                  <p class="h2 pt-2 pb-2 pl-2 pr-2">Basic Idea of the Game</p>
                 </div>
-                <div class="col-lg-8 cs-content pt-5 pt-lg-5 order-lg-2">
+                <div class="col-lg-8 pt-lg-5 pb-lg-5 order-lg-1">
                   <p class="py-1 font-size-lg mb-4 pb-2">
                     To be the first player to place markers in a row either
                     horizontally, vertically, diagonally or full cardboard,
@@ -219,10 +229,10 @@
               </div>
               <hr />
               <div class="row justify-content-center">
-                <div class="col-lg-4 pt-2 pt-lg-5 pb-lg-5 order-lg-1">
-                  <p class="h2 pt-4 pt-md-5 mt-2">Game Play</p>
+                <div class="col-lg-4 pt-lg-5 pb-lg-5 order-lg-1">
+                  <p class="h2 pt-2 pb-2 pl-2 pr-2">Game Play</p>
                 </div>
-                <div class="col-lg-8 cs-content pt-5 pt-lg-5 order-lg-2">
+                <div class="col-lg-8 pt-lg-5 pb-lg-5 order-lg-1">
                   <p class="py-1 font-size-lg mb-4 pb-2">
                     To start the game, the Host distributes a Bingo card to each
                     player.
@@ -248,105 +258,6 @@
                 </div>
               </div>
               <hr />
-              <div class="row justify-content-center">
-                <div class="col-lg-4 pt-2 pt-lg-5 pb-lg-5 order-lg-1">
-                  <p class="h2 pt-4 pt-md-5 mt-2">Generate Cards</p>
-                </div>
-                <div class="col-lg-8 cs-content pt-5 pt-lg-5 order-lg-2">
-                  <p class="py-1 font-size-lg mb-4 pb-2">
-                    Select number of players:
-                  </p>
-                  <!-- Textual addon -->
-                  <div class="input-group input-group-lg">
-                    <select
-                      class="py-1 font-size-lg mb-4 pb-2"
-                      onchange="getOption(this)"
-                    >
-                      <option class="py-1 font-size-sm mb-4 pb-2"
-                        >Choose one...</option
-                      >
-                      <option class="py-1 font-size-sm mb-4 pb-2">1</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">2</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">3</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">4</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">5</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">6</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">7</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">8</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">9</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">10</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">11</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">12</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">13</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">14</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">15</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">16</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">17</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">18</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">19</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">20</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">21</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">22</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">23</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">24</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">25</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">26</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">27</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">28</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">29</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">30</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">31</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">32</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">33</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">34</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">35</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">36</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">37</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">38</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">39</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">40</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">41</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">42</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">43</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">44</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">45</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">46</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">47</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">48</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">49</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">50</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">51</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">52</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">53</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">54</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">55</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">56</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">57</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">58</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">59</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">60</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">61</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">62</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">63</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">64</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">65</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">66</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">67</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">68</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">69</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">70</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">71</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">72</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">73</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">74</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">75</option>
-                    </select>
-                  </div>
-                  <div id="links">
-                    
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
         </div>
@@ -354,80 +265,5 @@
     </div>
 
     <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-      // get number of cards selected
-      function getOption (el) {
-        const option = el.value
-        if (option === 'esc') return
-        console.log(option)
-        link = ''
-        for (let i = 1; i <= option; i ++) {
-            link = link + '<li>' + '<a style="text-decorations:none; color:inherit;" href="https://letsbingo.github.io/cards/' + i + '">https://letsbingo.github.io/cards/' + i + '</a></li>';
-        }
-        document.getElementById('links').innerHTML = '<ul>' + link + '</ul>';
-        return option
-      }
-      function randomUniqueNum (range, outputCount) {
-        let arr = []
-        for (let i = 1; i <= range; i++) {
-          arr.push(i)
-        }
-
-        let result = []
-
-        for (let i = 1; i <= outputCount; i++) {
-          const random = Math.floor(Math.random() * (range - i))
-          result.push(arr[random])
-          arr[random] = arr[range - i]
-        }
-
-        return result
-      }
-      $(document).ready(function () {
-        $('#start').click(function () {
-          $('#start').attr('disabled', true)
-          for (let i = 10; i > 0; i--) {
-            setTimeout(() => {
-              $('#start').html('Starting...')
-              $('#start').css('animation', 'blinker 1s linear infinite')
-            }, 1000)
-          }
-          num = randomUniqueNum(75, 75)
-          for (let i = 1; i < num.length; i++) {
-            new Promise(function (resolve) {
-              setTimeout(function timer () {
-                $('#start').html('Start New Game')
-                $('#start').css('animation', 'none')
-                $('div')
-                  .filter(function () {
-                    return $(this).text() === String(num[i])
-                  })
-                  .css('animation', 'blinker 1s linear infinite')
-                var msg = new SpeechSynthesisUtterance()
-                msg.text = String(num[i])
-                window.speechSynthesis.speak(msg)
-                setTimeout(function () {
-                  window.speechSynthesis.speak(msg)
-                }, 4000)
-                setTimeout(function () {
-                  window.speechSynthesis.speak(msg)
-                }, 9000)
-                setTimeout(() => {
-                  $('div')
-                    .filter(function () {
-                      return $(this).text() === String(num[i])
-                    })
-                    .css({ animation: 'none', color: 'black' })
-                }, 10000)
-                if (i != 1) {
-                  $('#previous').text(String(num[i - 1]))
-                }
-                $('#total').text(String(i))
-              }, i * 10000)
-            })
-          }
-        })
-      })
-    </script>
   </body>
 </html>
