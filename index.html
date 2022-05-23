@@ -1,476 +1,419 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! Completely free bingo app - no downloads necessary!"
-    />
-    <meta
-      name="keywords"
-      content="bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board"
-    />
-    <meta name="author" content="Aditya Karnik" />
-    <meta
-      name="viewport"
-      content="width=device-width,height=device-height,initial-scale=1.0"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="twitter:site" content="@aditya-karnik" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/icons/favicon-16x16.png"
-    />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="shortcut icon" href="/favicon.svg" />
-    <title>Let's Bingo! | Free Online Bingo Caller</title>
-    <!-- Vendor Styles-->
-    <link
-      rel="stylesheet preload"
-      as="style"
-      media="screen"
-      href="assets/css/simplebar.min.css"
-    />
-    <link
-      rel="stylesheet preload"
-      as="style"
-      media="screen"
-      href="assets/css/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet preload"
-      as="style"
-      media="screen"
-      href="assets/css/lightgallery.min.css"
-    />
-    <!-- Main Theme Styles + Bootstrap-->
-    <link
-      rel="stylesheet preload"
-      as="style"
-      media="screen"
-      href="assets/css/theme.min.css"
-    />
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <style>
-      @font-face {
-        font-family: Marvelous-Script-Demo;
-        font-display: swap;
-        src: url('assets\\font\\Marvelous-Script-Demo.otf');
-      }
-      .logo-text {
-        font-family: Marvelous-Script-Demo;
-        font-size: 200%;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! Completely free bingo app - no downloads necessary!" />
+  <meta name="keywords"
+    content="bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board" />
+  <meta name="author" content="Aditya Karnik" />
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+  <!-- Font Ubuntu -->
+  <link rel="stylesheet preload prefetch" as="style"
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" crossorigin="anonymous" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="twitter:site" content="@aditya-karnik" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <title>Let's Bingo! | Free Online Bingo Caller</title>
+  <!-- Vendor Styles-->
+  <link rel="stylesheet preload" as="style" media="screen" href="assets/css/simplebar.min.css" />
+  <link rel="stylesheet preload" as="style" media="screen" href="assets/css/tiny-slider.css" />
+  <link rel="stylesheet preload" as="style" media="screen" href="assets/css/lightgallery.min.css" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet preload" as="style" media="screen" href="assets/css/theme.min.css" />
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <style>
+    @font-face {
+      font-family: Marvelous-Script-Demo;
+      font-display: swap;
+      src: url('assets\\font\\Marvelous-Script-Demo.otf');
+    }
+
+    .logo-text {
+      font-family: Marvelous-Script-Demo;
+      font-size: 200%;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      color: #ffc602;
+      font-display: swap;
+    }
+
+    html {
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100%;
+      font-family: 'Ubuntu', sans-serif;
+      font-display: swap;
+    }
+
+    #root {
+      min-height: 100%;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      /* Remove scrollbar space */
+      background: transparent;
+      /* Optional: just make scrollbar invisible */
+    }
+
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+      background: #ff0000;
+    }
+
+    * {
+      font-family: 'Ubuntu', sans-serif;
+      font-display: swap;
+    }
+
+    .navbar {
+      background-color: #3c3c3c;
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: 50;
         color: #ffc602;
-        font-display: swap;
       }
-      html {
-        overflow: scroll;
-        overflow-x: hidden;
-        height: 100%;
-      }
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-      }
-      body {
-        min-height: 100%;
-      }
-      #root {
-        min-height: 100%;
-      }
-      ::-webkit-scrollbar {
-        width: 0; /* Remove scrollbar space */
-        background: transparent; /* Optional: just make scrollbar invisible */
-      }
-      /* Optional: show position indicator in red */
-      ::-webkit-scrollbar-thumb {
-        background: #ff0000;
-      }
-      * {
-        font-family: 'Ubuntu', sans-serif;
-        font-display: swap;
-      }
-      .navbar {
-        background-color: #3c3c3c;
-      }
+    }
 
-      @keyframes blinker {
-        50% {
-          opacity: 50;
-          color: #ffc602;
-        }
-      }
-      /* Smartphones (portrait and landscape) ----------- */
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        /* Styles */
-      }
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      /* Styles */
+    }
 
-      /* Smartphones (landscape) ----------- */
-      @media only screen and (min-width: 321px) {
-        /* Styles */
-      }
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (min-width: 321px) {
+      /* Styles */
+    }
 
-      /* Smartphones (portrait) ----------- */
-      @media only screen and (max-width: 320px) {
-        /* Styles */
-      }
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width: 320px) {
+      /* Styles */
+    }
 
-      /* iPads (portrait and landscape) ----------- */
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        /* Styles */
-      }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      /* Styles */
+    }
 
-      /* iPads (landscape) ----------- */
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-        /* Styles */
-      }
+    /* iPads (landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      /* Styles */
+    }
 
-      /* iPads (portrait) ----------- */
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-        /* Styles */
-      }
+    /* iPads (portrait) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      /* Styles */
+    }
 
-      /* Desktops and laptops ----------- */
-      @media only screen and (min-width: 1224px) {
-        /* Styles */
-      }
+    /* Desktops and laptops ----------- */
+    @media only screen and (min-width: 1224px) {
+      /* Styles */
+    }
 
-      /* Large screens ----------- */
-      @media only screen and (min-width: 1824px) {
-        /* Styles */
-      }
+    /* Large screens ----------- */
+    @media only screen and (min-width: 1824px) {
+      /* Styles */
+    }
 
-      /* iPhone 4 ----------- */
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-        only screen and (min-device-pixel-ratio: 1.5) {
-        /* Styles */
-      }
-      /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
-      @media screen and (min-width: 1024px) {
-        /*Style*/
-      }
+    /* iPhone 4 ----------- */
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+      /* Styles */
+    }
 
-      /*###Tablet(medium)###*/
-      @media screen and (min-width: 768px) and (max-width: 1023px) {
-        /*Style*/
-      }
+    /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
+    @media screen and (min-width: 1024px) {
+      /*Style*/
+    }
 
-      /*### Smartphones (portrait and landscape)(small)### */
-      @media screen and (min-width: 0px) and (max-width: 767px) {
-        /*Style*/
-      }
-    </style>
-    <script src="assets/js/style.js"></script>
-    <link href="assets/css/style.css" rel="stylesheet" />
+    /*###Tablet(medium)###*/
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      /*Style*/
+    }
 
-    <style data-emotion="css"></style>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div>
-        <div class="dark-bg light-links" style="min-height: 100%;">
-          <header style="background-color: #3c3c3c;">
-            <div class="container row align-center">
-              <div>
-                <a href="/"><p class="logo-text">Let's Bingo</p></a>
-              </div>
-              <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
-                <a
-                  class="btn btn-secondary"
-                  href="#generate-cards"
-                  data-scroll
-                  style="margin-right: 5%;"
-                >
-                  <i></i>G<span class="d-none d-lg-inline">enerate Cards</span>
-                </a>
-                <a
-                  class="btn btn-secondary"
-                  href="/how_to_play"
-                  target="_blank"
-                  rel="noopener"
-                  style="margin-right: 5%;"
-                >
-                  <i></i>How<span class="d-none d-lg-inline"> to Play</span>
-                </a>
-                <a
-                  class="btn btn-secondary"
-                  href="https://github.com/adityaskarnik"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i></i>C<span class="d-none d-lg-inline">reator</span>
-                </a>
-              </div>
+    /*### Smartphones (portrait and landscape)(small)### */
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      /*Style*/
+    }
+  </style>
+  <script src="assets/js/style.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet" />
+
+  <style data-emotion="css"></style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div>
+      <div class="dark-bg light-links" style="min-height: 100%;">
+        <header style="background-color: #3c3c3c;">
+          <div class="container row align-center">
+            <div>
+              <a href="/">
+                <p class="logo-text">Let's Bingo</p>
+              </a>
             </div>
-          </header>
-          <section class="board-block">
-            <div
-              class="container row no-wrap align-stretch"
-              style="margin:0 auto;"
-            >
-              <div class="col board-side">
-                <div id="board" class="flex">
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter dark-bg red-text">B</div>
-                    <div class="col ball">1</div>
-                    <div class="col ball">2</div>
-                    <div class="col ball">3</div>
-                    <div class="col ball">4</div>
-                    <div class="col ball">5</div>
-                    <div class="col ball">6</div>
-                    <div class="col ball">7</div>
-                    <div class="col ball">8</div>
-                    <div class="col ball">9</div>
-                    <div class="col ball">10</div>
-                    <div class="col ball">11</div>
-                    <div class="col ball">12</div>
-                    <div class="col ball">13</div>
-                    <div class="col ball">14</div>
-                    <div class="col ball">15</div>
-                  </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter dark-bg red-text">I</div>
-                    <div class="col ball">16</div>
-                    <div class="col ball">17</div>
-                    <div class="col ball">18</div>
-                    <div class="col ball">19</div>
-                    <div class="col ball">20</div>
-                    <div class="col ball">21</div>
-                    <div class="col ball">22</div>
-                    <div class="col ball">23</div>
-                    <div class="col ball">24</div>
-                    <div class="col ball">25</div>
-                    <div class="col ball">26</div>
-                    <div class="col ball">27</div>
-                    <div class="col ball">28</div>
-                    <div class="col ball">29</div>
-                    <div class="col ball">30</div>
-                  </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter dark-bg red-text">N</div>
-                    <div class="col ball">31</div>
-                    <div class="col ball">32</div>
-                    <div class="col ball">33</div>
-                    <div class="col ball">34</div>
-                    <div class="col ball">35</div>
-                    <div class="col ball">36</div>
-                    <div class="col ball">37</div>
-                    <div class="col ball">38</div>
-                    <div class="col ball">39</div>
-                    <div class="col ball">40</div>
-                    <div class="col ball">41</div>
-                    <div class="col ball">42</div>
-                    <div class="col ball">43</div>
-                    <div class="col ball">44</div>
-                    <div class="col ball">45</div>
-                  </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter dark-bg red-text">G</div>
-                    <div class="col ball">46</div>
-                    <div class="col ball">47</div>
-                    <div class="col ball">48</div>
-                    <div class="col ball">49</div>
-                    <div class="col ball">50</div>
-                    <div class="col ball">51</div>
-                    <div class="col ball">52</div>
-                    <div class="col ball">53</div>
-                    <div class="col ball">54</div>
-                    <div class="col ball">55</div>
-                    <div class="col ball">56</div>
-                    <div class="col ball">57</div>
-                    <div class="col ball">58</div>
-                    <div class="col ball">59</div>
-                    <div class="col ball">60</div>
-                  </div>
-                  <div class="row no-wrap set-size text-center notranslate">
-                    <div class="col board-letter dark-bg red-text">O</div>
-                    <div class="col ball">61</div>
-                    <div class="col ball">62</div>
-                    <div class="col ball">63</div>
-                    <div class="col ball">64</div>
-                    <div class="col ball">65</div>
-                    <div class="col ball">66</div>
-                    <div class="col ball">67</div>
-                    <div class="col ball">68</div>
-                    <div class="col ball">69</div>
-                    <div class="col ball">70</div>
-                    <div class="col ball">71</div>
-                    <div class="col ball">72</div>
-                    <div class="col ball">73</div>
-                    <div class="col ball">74</div>
-                    <div class="col ball">75</div>
-                  </div>
+            <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+              <a class="btn btn-secondary" href="#generate-cards" data-scroll style="margin-right: 5%;">
+                <i></i>G<span class="d-none d-lg-inline">enerate Cards</span>
+              </a>
+              <a class="btn btn-secondary" href="/how_to_play" target="_blank" rel="noopener" style="margin-right: 5%;">
+                <i></i>How<span class="d-none d-lg-inline"> to Play</span>
+              </a>
+              <a class="btn btn-secondary" href="https://github.com/adityaskarnik" target="_blank" rel="noopener">
+                <i></i>C<span class="d-none d-lg-inline">reator</span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <section class="board-block">
+          <div class="container row no-wrap align-stretch" style="margin:0 auto;">
+            <div class="col board-side">
+              <div id="board" class="flex">
+                <div class="row no-wrap set-size text-center notranslate">
+                  <div class="col board-letter dark-bg red-text">B</div>
+                  <div class="col ball">1</div>
+                  <div class="col ball">2</div>
+                  <div class="col ball">3</div>
+                  <div class="col ball">4</div>
+                  <div class="col ball">5</div>
+                  <div class="col ball">6</div>
+                  <div class="col ball">7</div>
+                  <div class="col ball">8</div>
+                  <div class="col ball">9</div>
+                  <div class="col ball">10</div>
+                  <div class="col ball">11</div>
+                  <div class="col ball">12</div>
+                  <div class="col ball">13</div>
+                  <div class="col ball">14</div>
+                  <div class="col ball">15</div>
+                </div>
+                <div class="row no-wrap set-size text-center notranslate">
+                  <div class="col board-letter dark-bg red-text">I</div>
+                  <div class="col ball">16</div>
+                  <div class="col ball">17</div>
+                  <div class="col ball">18</div>
+                  <div class="col ball">19</div>
+                  <div class="col ball">20</div>
+                  <div class="col ball">21</div>
+                  <div class="col ball">22</div>
+                  <div class="col ball">23</div>
+                  <div class="col ball">24</div>
+                  <div class="col ball">25</div>
+                  <div class="col ball">26</div>
+                  <div class="col ball">27</div>
+                  <div class="col ball">28</div>
+                  <div class="col ball">29</div>
+                  <div class="col ball">30</div>
+                </div>
+                <div class="row no-wrap set-size text-center notranslate">
+                  <div class="col board-letter dark-bg red-text">N</div>
+                  <div class="col ball">31</div>
+                  <div class="col ball">32</div>
+                  <div class="col ball">33</div>
+                  <div class="col ball">34</div>
+                  <div class="col ball">35</div>
+                  <div class="col ball">36</div>
+                  <div class="col ball">37</div>
+                  <div class="col ball">38</div>
+                  <div class="col ball">39</div>
+                  <div class="col ball">40</div>
+                  <div class="col ball">41</div>
+                  <div class="col ball">42</div>
+                  <div class="col ball">43</div>
+                  <div class="col ball">44</div>
+                  <div class="col ball">45</div>
+                </div>
+                <div class="row no-wrap set-size text-center notranslate">
+                  <div class="col board-letter dark-bg red-text">G</div>
+                  <div class="col ball">46</div>
+                  <div class="col ball">47</div>
+                  <div class="col ball">48</div>
+                  <div class="col ball">49</div>
+                  <div class="col ball">50</div>
+                  <div class="col ball">51</div>
+                  <div class="col ball">52</div>
+                  <div class="col ball">53</div>
+                  <div class="col ball">54</div>
+                  <div class="col ball">55</div>
+                  <div class="col ball">56</div>
+                  <div class="col ball">57</div>
+                  <div class="col ball">58</div>
+                  <div class="col ball">59</div>
+                  <div class="col ball">60</div>
+                </div>
+                <div class="row no-wrap set-size text-center notranslate">
+                  <div class="col board-letter dark-bg red-text">O</div>
+                  <div class="col ball">61</div>
+                  <div class="col ball">62</div>
+                  <div class="col ball">63</div>
+                  <div class="col ball">64</div>
+                  <div class="col ball">65</div>
+                  <div class="col ball">66</div>
+                  <div class="col ball">67</div>
+                  <div class="col ball">68</div>
+                  <div class="col ball">69</div>
+                  <div class="col ball">70</div>
+                  <div class="col ball">71</div>
+                  <div class="col ball">72</div>
+                  <div class="col ball">73</div>
+                  <div class="col ball">74</div>
+                  <div class="col ball">75</div>
                 </div>
               </div>
             </div>
-          </section>
-          <section class="game-controls dark-bg navbar padding-sm">
-            <div class="container row justify-center align-center">
-              <div class="">
-                <section>
-                  <div data-disabled="false" style="text-align: center;">
-                    <button
-                      type="button"
-                      data-disabled="false"
-                      id="start"
-                      style="text-align: center;"
-                    >
-                      Start New Game
-                    </button>
-                    <div>
-                      <b
-                        ><h2
-                          id="previous"
-                          style="color: #ffc602; text-align: center;"
-                        ></h2
-                      ></b>
-                    </div>
-                    <div
-                      class="callNumber-text uppercase"
-                      style="text-align: center"
-                    >
-                      Previous Call
-                    </div>
-                  </div>
+          </div>
+        </section>
+        <section class="game-controls dark-bg navbar padding-sm">
+          <div class="container row justify-center align-center">
+            <div class="">
+              <section>
+                <div data-disabled="false" style="text-align: center;">
+                  <button type="button" data-disabled="false" id="start" style="text-align: center;">
+                    Start New Game
+                  </button>
                   <div>
-                    <h2
-                      id="total"
-                      style="color: #ffc602; text-align: center"
-                    ></h2>
+                    <b>
+                      <h2 id="previous" style="color: #ffc602; text-align: center;"></h2>
+                    </b>
                   </div>
-                  <div
-                    class="callNumber-text uppercase"
-                    style="text-align: center"
-                  >
-                    Total Calls
+                  <div class="callNumber-text uppercase" style="text-align: center">
+                    Previous Call
                   </div>
-                </section>
+                </div>
+                <div>
+                  <h2 id="total" style="color: #ffc602; text-align: center"></h2>
+                </div>
+                <div class="callNumber-text uppercase" style="text-align: center">
+                  Total Calls
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <hr class="h2 mt-5" />
+        <section class="board-block" id="generate-cards">
+          <div class="container no-wrap align-stretch" style="margin:0 auto;">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 pt-lg-5 pb-lg-5 order-lg-1">
+                <p class="pt-2 pb-2 pl-2 pr-2">
+                  <h2>Generate Cards</h2>
+                </p>
+              </div>
+              <div class="col-lg-8  pt-lg-5 pb-lg-5 order-lg-1" style="overflow-y: auto; height: 250px;">
+                <h5>
+                  Select number of players:
+                </h5>
+                <!-- Textual addon -->
+                <div class="input-group input-group-lg">
+                  <select class="py-1 font-size-lg mb-4 pb-2" onchange="getOption(this)">
+                    <option class="py-1 font-size-sm mb-4 pb-2">Choose one...</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">1</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">2</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">3</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">4</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">5</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">6</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">7</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">8</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">9</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">10</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">11</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">12</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">13</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">14</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">15</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">16</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">17</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">18</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">19</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">20</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">21</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">22</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">23</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">24</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">25</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">26</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">27</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">28</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">29</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">30</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">31</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">32</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">33</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">34</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">35</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">36</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">37</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">38</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">39</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">40</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">41</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">42</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">43</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">44</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">45</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">46</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">47</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">48</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">49</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">50</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">51</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">52</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">53</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">54</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">55</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">56</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">57</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">58</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">59</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">60</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">61</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">62</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">63</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">64</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">65</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">66</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">67</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">68</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">69</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">70</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">71</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">72</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">73</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">74</option>
+                    <option class="py-1 font-size-sm mb-4 pb-2">75</option>
+                  </select>
+                </div>
+                <div id="links"></div>
               </div>
             </div>
-          </section>
-          <hr class="h2 mt-5" />
-          <section class="board-block" id="generate-cards">
-            <div class="container no-wrap align-stretch" style="margin:0 auto;">
-              <div class="row justify-content-center">
-                <div class="col-lg-4 pt-lg-5 pb-lg-5 order-lg-1">
-                  <p class="h2 pt-2 pb-2 pl-2 pr-2">Generate Cards</p>
-                </div>
-                <div
-                  class="col-lg-8  pt-lg-5 pb-lg-5 order-lg-1"
-                  style="overflow-y: auto; height: 250px;"
-                >
-                  <p class="py-1 font-size-lg mb-4 pb-2">
-                    Select number of players:
-                  </p>
-                  <!-- Textual addon -->
-                  <div class="input-group input-group-lg">
-                    <select
-                      class="py-1 font-size-lg mb-4 pb-2"
-                      onchange="getOption(this)"
-                    >
-                      <option class="py-1 font-size-sm mb-4 pb-2"
-                        >Choose one...</option
-                      >
-                      <option class="py-1 font-size-sm mb-4 pb-2">1</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">2</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">3</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">4</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">5</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">6</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">7</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">8</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">9</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">10</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">11</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">12</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">13</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">14</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">15</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">16</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">17</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">18</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">19</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">20</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">21</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">22</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">23</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">24</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">25</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">26</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">27</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">28</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">29</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">30</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">31</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">32</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">33</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">34</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">35</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">36</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">37</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">38</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">39</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">40</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">41</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">42</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">43</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">44</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">45</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">46</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">47</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">48</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">49</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">50</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">51</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">52</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">53</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">54</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">55</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">56</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">57</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">58</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">59</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">60</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">61</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">62</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">63</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">64</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">65</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">66</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">67</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">68</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">69</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">70</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">71</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">72</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">73</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">74</option>
-                      <option class="py-1 font-size-sm mb-4 pb-2">75</option>
-                    </select>
-                  </div>
-                  <div id="links"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
-    <script type="text/JavaScript">
-      // get number of cards selected
+  </div>
+  <script type="text/JavaScript">
+    // get number of cards selected
       function getOption (el) {
         const option = el.value
         if (option === 'esc') return
@@ -540,5 +483,6 @@
         });
       });
     </script>
-  </body>
+</body>
+
 </html>
