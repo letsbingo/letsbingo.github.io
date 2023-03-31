@@ -5,7 +5,7 @@
   <meta name="description"
     content="Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! Completely free bingo app - no downloads necessary!" />
   <meta name="keywords"
-    content="bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board" />
+    content="virtual bingo, bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board" />
   <meta name="author" content="Aditya Karnik" />
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
   <!-- Font Ubuntu -->
@@ -13,11 +13,14 @@
     href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" crossorigin="anonymous" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="twitter:site" content="@aditya-karnik" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="theme-color" content="#ffffff" />
-  <link rel="shortcut icon" href="/favicon.svg" />
   <title>Let's Bingo! | Free Online Bingo Caller</title>
   <!-- Vendor Styles-->
   <link rel="stylesheet preload" as="style" media="screen" href="assets/css/simplebar.min.css" />
@@ -103,8 +106,8 @@
     }
 
     @keyframes blinker {
-      50% {
-        opacity: 50;
+      100% {
+        opacity: 0;
         color: #ffc602;
       }
     }
@@ -168,6 +171,49 @@
     /*### Smartphones (portrait and landscape)(small)### */
     @media screen and (min-width: 0px) and (max-width: 767px) {
       /*Style*/
+    }
+
+    datalist {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      writing-mode: vertical-lr;
+      width: 200px;
+    }
+
+    option {
+      padding: 0;
+    }
+
+    input[type="range"] {
+      width: 200px;
+      margin-top: 10;
+      margin-bottom: 5;
+    }
+
+
+    #countdown {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    #text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 150px;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
     }
   </style>
   <script src="assets/js/style.js"></script>
@@ -302,10 +348,13 @@
               </div>
             </div>
           </div>
+          <div id="countdown">
+            <div id="text">Overlay Text</div>
+          </div>
         </section>
         <section class="game-controls dark-bg navbar padding-sm">
           <div class="container row justify-center align-center">
-            <div class="">
+            <div class="d-flex align-items-center mr-lg-7 pt-3">
               <section>
                 <div data-disabled="false" style="text-align: center;">
                   <button type="button" data-disabled="false" id="start" style="text-align: center;">
@@ -327,6 +376,21 @@
                   Total Calls
                 </div>
               </section>
+            </div>
+            <div class="d-flex align-items-center ml-lg-7 pt-3">
+              <div class="justify-center" style="text-align: center;">
+                <div class="callNumber-text uppercase" style="text-align: center" id="select">
+                  Select Caller Speed
+                </div>
+                <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="caller-speed" list="markers">
+                <datalist id="markers">
+                  <option value="1" label="1">3 sec</option>
+                  <option value="2" label="2">6 sec</option>
+                  <option value="3" label="3">9 sec</option>
+                  <option value="4" label="4">12 sec</option>
+                  <option value="5" label="5">15 sec</option>
+                </datalist>
+              </div>
             </div>
           </div>
         </section>
@@ -471,7 +535,16 @@
     </div>
   </div>
   <script type="text/JavaScript">
+    $("#select").css('animation', 'blinker 1s linear infinite')
     // get number of cards selected
+    // speed = 1;
+    speed = Number(document.getElementById("myRange").value);
+    var timeleft = (9 * speed);
+      const input = document.querySelector("#myRange")
+      input.addEventListener("input", (event) => {
+        speed = Number(event.target.value);
+        timeleft = 9 * speed;
+      })
       function getOption (el) {
         const option = el.value
         if (option === 'esc') return
@@ -499,13 +572,37 @@
 
         return result;
       };
+
+      function on() {
+        document.getElementById("countdown").style.display = "block";
+      }
+
+      function off() {
+        document.getElementById("countdown").style.display = "none";
+      }
+
+      $("#start").click(function(){
+        var downloadTimer = setInterval(function(){
+          if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            off();
+          } else {
+            on();
+            document.getElementById("text").innerHTML = timeleft;
+          }
+          timeleft -= 1;
+        }, 1000);
       $(document).ready(function() {
-        $("#start").click(function(){
+          $("#select").css({'animation': 'none', 'color': 'black'});
+          $("#myRange").css({'animation': 'none', 'color': 'black'});
+          $("#markers").css({'animation': 'none', 'color': 'black'});
+          $("#myRange").attr('disabled', true);
           $("#start").attr("disabled", true);
           for (let i=10; i > 0; i--) {
             setTimeout(() => {
               $("#start").html("Starting...")
               $("#start").css('animation', 'blinker 1s linear infinite');
+              $("#text").css('animation', 'blinker 1s infinite')
             }, 1000);
           }
           num = randomUniqueNum(75, 75);
@@ -522,20 +619,20 @@
                 window.speechSynthesis.speak(msg);
                 setTimeout(function() {
                   window.speechSynthesis.speak(msg);
-                }, 3000);
+                }, 3000 * speed);
                 setTimeout(function() {
                   window.speechSynthesis.speak(msg);
-                }, 6000);
+                }, 6000 * speed);
                 setTimeout(() => {
                   $("div").filter(function() {
                     return $(this).text() === String(num[i]);
                   }).css({"animation": "none", "color": "black"});
-                }, 7000);
+                }, 9000 * speed);
                 if (i != 1) {
                   $("#previous").text(String(num[i-1]));
                 }
                 $("#total").text(String(i));
-              }, i * 7000);
+              }, i * (9500 * speed));
             });
           }
         });
