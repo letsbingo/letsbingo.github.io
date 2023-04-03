@@ -86,6 +86,7 @@
 
     ::-webkit-scrollbar {
       width: 0;
+      height: 2;
       /* Remove scrollbar space */
       background: transparent;
       /* Optional: just make scrollbar invisible */
@@ -93,7 +94,7 @@
 
     /* Optional: show position indicator in red */
     ::-webkit-scrollbar-thumb {
-      background: #ff0000;
+      background: #ffc602;
     }
 
     * {
@@ -115,6 +116,44 @@
     /* Smartphones (portrait and landscape) ----------- */
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
       /* Styles */
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board {
+          align-self: center;
+          display: flex;
+          flex-flow: column;
+      }
+
+      .board-block .board-side #board,
+        .board-block .pattern-side #board {
+            align-self: unset;
+            display: block !important;
+            flex-flow: unset;
+            justify-content: unset;
+            margin: 0 auto;
+            max-width: 100%;
+            padding-top: 1rem;
+            width: 350px
+        }
+
+        footer,
+        header {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+        }
     }
 
     /* Smartphones (landscape) ----------- */
@@ -124,12 +163,102 @@
 
     /* Smartphones (portrait) ----------- */
     @media only screen and (max-width: 320px) {
+      .logo-text {
+        font-family: Marvelous-Script-Demo;
+        font-size: 120%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: #ffc602;
+        font-display: swap;
+      }
+
+      .btn-secondary,.btn-secondary:hover,.btn-outline-secondary,.btn-outline-secondary:hover,.btn-light,.btn-light:hover {
+        color: #5a5b75 !important;
+        border-color: transparent;
+        font-size: 14px;
+      }
+      
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: large;
+          margin: 2px;
+          padding: 0px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board {
+          align-self: center;
+          display: flex;
+          flex-flow: column;
+      }
+
+      .board-block .board-side #board,
+        .board-block .pattern-side #board {
+            align-self: unset;
+            display: block !important;
+            flex-flow: unset;
+            justify-content: unset;
+            margin: 0 auto;
+            max-width: 100%;
+            padding-top: 1rem;
+            width: 350px
+        }
+
+        footer,
+        header {
+            padding: 1rem;
+        }
       /* Styles */
     }
 
     /* iPads (portrait and landscape) ----------- */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       /* Styles */
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: large;
+          margin: 2px;
+      }
+
+      footer,
+          header {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+              padding-right: 1rem;
+      }
+
+      .board-block .board-side #board {
+          align-self: center;
+          display: flex;
+          flex-flow: column;
+      }
+
+      .board-block .board-side #board,
+        .board-block .pattern-side #board {
+            align-self: unset;
+            display: block !important;
+            flex-flow: unset;
+            justify-content: unset;
+            margin: 0 auto;
+            max-width: 100%;
+            padding-top: 1rem;
+        }
     }
 
     /* iPads (landscape) ----------- */
@@ -139,17 +268,60 @@
 
     /* iPads (portrait) ----------- */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      /* Styles */
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: x-large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: x-large;
+          margin: 2px;
+      }
     }
 
     /* Desktops and laptops ----------- */
     @media only screen and (min-width: 1224px) {
       /* Styles */
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: xxx-large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: xxx-large;
+          margin: 2px;
+      }
+
+      footer,
+        header {
+            padding: 1rem;
+        }
     }
 
     /* Large screens ----------- */
     @media only screen and (min-width: 1824px) {
       /* Styles */
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: xxx-large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: xxx-large;
+          margin: 2px;
+      }
     }
 
     /* iPhone 4 ----------- */
@@ -161,6 +333,26 @@
     /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
     @media screen and (min-width: 1024px) {
       /*Style*/
+      .board-block .board-side #board .ball {
+          color: #f7f7fc;
+          align-self: center;
+          font-size: xxx-large;
+          margin: 2px;
+      }
+
+      .board-block .board-side #board .board-letter {
+          flex: 0 0 1.25em !important;
+          font-weight: 700;
+          font-size: xxx-large;
+          margin: 2px;
+      }
+
+      footer,
+          header {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+              padding-right: 2rem;
+      }
     }
 
     /*###Tablet(medium)###*/
@@ -357,7 +549,7 @@
             <div class="d-flex align-items-center mr-lg-7 pt-3">
               <section>
                 <div data-disabled="false" style="text-align: center;">
-                  <button type="button" data-disabled="false" id="start" style="text-align: center;">
+                  <button class="callNumber-text uppercase" type="button" data-disabled="false" id="start" style="text-align: center;">
                     Start New Game
                   </button>
                   <div>
@@ -498,8 +690,8 @@
           <div class="container no-wrap align-stretch" style="margin:0 auto;">
             <div class="row mt-3 pt-md-2 pb-2 align-items-center">
               <div class="col-lg-6 col-md-2 pb-2 text-center">
-                <h5 class="font-weight-light mb-2">Need to talk?</h5>
-                <h5 class="mb-3">Reach out to me:</h5>
+                <p class="font-size-lg text-center mb-2"><span class="mr-2">Need to talk?</span></p>
+                <p class="font-size-xlg text-center mb-3"><span class="mr-3">Reach out to me:</span></p>
                 <a class="btn btn-secondary mx-1 my-1" href="https://linkedin.com/in/adityaskarnik" target="_blank"
                   rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
                 &nbsp;
@@ -536,6 +728,7 @@
   </div>
   <script type="text/JavaScript">
     $("#select").css('animation', 'blinker 1s linear infinite')
+    $("#start").css('animation', 'blinker 1s linear infinite')
     // get number of cards selected
     // speed = 1;
     speed = Number(document.getElementById("myRange").value);

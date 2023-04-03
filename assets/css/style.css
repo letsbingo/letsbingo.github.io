@@ -26,10 +26,6 @@ ul p {
     font-size: .8em
 }
 
-footer,
-header {
-    padding: 1rem
-}
 
 @media screen and (max-width:700px) {
     header .row .col:nth-of-type(2) {
@@ -239,18 +235,6 @@ span.tag.bugfix {
 @media screen and (max-width:700px) {
     .board-block>.row {
         display: block
-    }
-
-    .board-block .board-side #board,
-    .board-block .pattern-side #board {
-        align-self: unset;
-        display: block !important;
-        flex-flow: unset;
-        justify-content: unset;
-        margin: 0 auto;
-        max-width: 100%;
-        padding: 1rem;
-        width: 350px
     }
 
     .board-block .board-side #board .row,
@@ -627,13 +611,7 @@ span.tag.bugfix {
     color: #222
 }
 
-.board-block .board-side #board {
-    align-self: center;
-    display: flex;
-    flex-flow: column;
-    
-    padding: 1rem
-}
+
 
 .board-block .board-side #board * {
     font-size: 2.7rem;
@@ -647,15 +625,7 @@ span.tag.bugfix {
     }
 }
 
-.board-block .board-side #board .board-letter {
-    flex: 0 0 1.25em !important;
-    font-weight: 700
-}
 
-.board-block .board-side #board .ball {
-    color: #3c3c3c;
-    align-self: center;
-}
 
 .board-block .board-side #board .ball button {
     background-color: inherit;
