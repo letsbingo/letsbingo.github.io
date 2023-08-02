@@ -11,7 +11,7 @@
       @media only screen {
         html,
         body {
-          background: #dbecf4;
+          background: #000000;
         }
       }
       @media only screen {
@@ -89,7 +89,7 @@
       #nav a {
         text-decoration: none;
         color: #333;
-        font-family: arial, sans;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 12px;
       }
       #nav a:hover {
@@ -111,19 +111,23 @@
       .bingo-card-id-main,
       .bingo-card-id-main a {
         text-align: left;
-        font-family: monospace;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 18px;
         color: #666;
         text-decoration: none;
       }
       #new-card {
-        font-family: Gotham;
+        font-family: 'Ubuntu', sans-serif;
         text-decoration: underline;
+        position: absolute;
+        padding-top: 10px;
+        color: #737491;
       }
       #new-card:hover {
         color: #222;
       }
       .bingo-card-id-main {
+        position: relative;
         width: 468px;
         margin: 0 auto 10px;
         display: flex;
@@ -181,12 +185,16 @@
         display: none;
       }
     </style>
-    <meta name="viewport" content="width=468, user-scalable=yes" />
+    
     <title>Let's Bingo</title>
     <meta
       name="description"
-      content="Let's Bingo"
+      content="Lets Bingo Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! Completely free bingo app - no downloads necessary!"
     />
+    <meta name="keywords"
+    content="virtual bingo, bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board" />
+  <meta name="author" content="Aditya Karnik" />
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
   </head>
   <body>
     <div class="print-image bingo-card-id">Bingo Card ID 42</div>
@@ -194,11 +202,7 @@
     <div class="main">
       <div class="wrapper free-card-rand">
         <style>
-          @font-face {
-            font-family: Gotham;
-            font-display: swap;
-            src:url("font\\Gotham-Book.otf");
-          }
+          
           #zoom {
             font-size: 16px;
             padding: 2px;
@@ -212,7 +216,7 @@
             margin: 0 auto;
             font-weight: bold;
             color: #fff;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
             background: #ff6666;
             padding: 0 15px;
             border: 0px none;
@@ -236,7 +240,7 @@
             background-position: 10px center;
             background-size: 25px;
             min-height: 38px;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
             font-weight: bold;
             font-size: 15px;
             width: 100%;
@@ -264,11 +268,11 @@
           body {
             padding: 0;
             margin: 0;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
           }
           @media only screen {
             body {
-              background: #dbecf4;
+              background: #000000;
             }
             html {
               overflow-x: hidden;
@@ -292,10 +296,10 @@
             overflow: hidden;
           }
         </style>
-        <div class="bingo-card-id-main">
+        <div id="loader-holder">
+          <div class="bingo-card-id-main">
             <span id="new-card">Reset</span>
         </div>
-        <div id="loader-holder">
           <div
             id="bingo-holder"
             style='background-image: url("../assets/images/42.PNG"); padding-top: 100px;'
