@@ -408,6 +408,9 @@
       -ms-transform: translate(-50%,-50%);
     }
     select {
+      border-right: 16px solid transparent;
+      border-color: #3c3c3c;
+      border-radius: 8px;
       background-color: #3c3c3c;
       width: 50%;
       padding: 10px;
@@ -423,6 +426,9 @@
       height: 0.5em;
       background-color: var(--select-arrow);
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+    .select-option-new {
+      padding: 20px;
     }
   </style>
   <script src="assets/js/style.js"></script>
@@ -617,7 +623,7 @@
                 <!-- Textual addon -->
                 <div class="input-group input-group-lg">
                   <select class="py-1 font-size-lg mb-4 pb-2" onchange="getOption(this)">
-                    <option class="py-1 font-size-lg mb-4 pb-2 select-option"><h1>Choose one...</h1></option>
+                    <option class=""><h1>Choose one...</h1></option>
                     <option class="py-1 font-size-lg mb-4 pb-2">1</option>
                     <option class="py-1 font-size-lg mb-4 pb-2">2</option>
                     <option class="py-1 font-size-lg mb-4 pb-2">3</option>
