@@ -407,6 +407,23 @@
       transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
     }
+    select {
+      background-color: #3c3c3c;
+      width: 50%;
+      padding: 10px;
+      color: #f7f7fc;
+    }
+    select option {
+      color: #f7f7fc;
+      width: 10px;
+    }
+    .select::after {
+      content: "";
+      width: 0.8em;
+      height: 0.5em;
+      background-color: var(--select-arrow);
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
   </style>
   <script src="assets/js/style.js"></script>
   <link href="assets/css/style.css" rel="stylesheet" />
@@ -591,9 +608,7 @@
           <div class="container no-wrap align-stretch" style="margin:0 auto;">
             <div class="row justify-content-center">
               <div class="col-lg-4 pt-lg-5 pb-lg-5 order-lg-1">
-                <p class="pt-2 pb-2 pl-2 pr-2">
-                  <h2>Generate Cards</h2>
-                </p>
+                <h1>Generate Cards</h1>
               </div>
               <div class="col-lg-8  pt-lg-5 pb-lg-5 order-lg-1" style="overflow-y: auto; height: 250px;">
                 <h5>
@@ -602,82 +617,82 @@
                 <!-- Textual addon -->
                 <div class="input-group input-group-lg">
                   <select class="py-1 font-size-lg mb-4 pb-2" onchange="getOption(this)">
-                    <option class="py-1 font-size-sm mb-4 pb-2">Choose one...</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">1</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">2</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">3</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">4</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">5</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">6</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">7</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">8</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">9</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">10</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">11</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">12</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">13</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">14</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">15</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">16</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">17</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">18</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">19</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">20</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">21</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">22</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">23</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">24</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">25</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">26</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">27</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">28</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">29</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">30</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">31</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">32</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">33</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">34</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">35</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">36</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">37</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">38</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">39</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">40</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">41</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">42</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">43</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">44</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">45</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">46</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">47</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">48</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">49</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">50</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">51</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">52</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">53</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">54</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">55</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">56</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">57</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">58</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">59</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">60</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">61</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">62</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">63</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">64</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">65</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">66</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">67</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">68</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">69</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">70</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">71</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">72</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">73</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">74</option>
-                    <option class="py-1 font-size-sm mb-4 pb-2">75</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2 select-option"><h1>Choose one...</h1></option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">1</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">2</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">3</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">4</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">5</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">6</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">7</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">8</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">9</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">10</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">11</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">12</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">13</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">14</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">15</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">16</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">17</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">18</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">19</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">20</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">21</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">22</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">23</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">24</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">25</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">26</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">27</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">28</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">29</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">30</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">31</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">32</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">33</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">34</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">35</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">36</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">37</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">38</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">39</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">40</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">41</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">42</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">43</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">44</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">45</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">46</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">47</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">48</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">49</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">50</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">51</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">52</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">53</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">54</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">55</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">56</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">57</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">58</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">59</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">60</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">61</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">62</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">63</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">64</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">65</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">66</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">67</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">68</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">69</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">70</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">71</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">72</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">73</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">74</option>
+                    <option class="py-1 font-size-lg mb-4 pb-2">75</option>
                   </select>
                 </div>
                 <div id="links"></div>
@@ -743,7 +758,7 @@
         if (option === 'esc') return
         link = ''
         for (let i = 1; i <= option; i ++) {
-            link = link + '<li>' + '<a style="color:inherit;" href="https://letsbingo.github.io/cards/' + i + '">https://letsbingo.github.io/cards/' + i + '</a></li>';
+            link = link + '<li>' + '<a style="color:inherit;" target="_blank" href="https://letsbingo.online/cards/' + i + '">https://letsbingo.online/cards/' + i + '</a></li>';
         }
         document.getElementById('links').innerHTML = '<ul>' + link + '</ul>';
         return option
