@@ -11,7 +11,7 @@
       @media only screen {
         html,
         body {
-          background: #dbecf4;
+          background: #000000;
         }
       }
       @media only screen {
@@ -34,9 +34,9 @@
       }
       .cross {
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB94LAgwWBsXYx+MAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAOVBMVEUAAAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD+TVPmiymZAAAAEnRSTlMABAsQEyVDZGVsfYWZo66ztL83Z3pqAAAAAWJLR0QSe7xsAAAABEhJREFUeNrtnQl22kAQBQXGGGyDw/0vG8dLWLTN8mf69+tfB8hTlWQCGml6GIQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQNu21s/83pGNr/+e3y8fIU2v/iqsB2h/d3VeB42uD9/RR4evm4vD3j/b0U+Od/wRW48fdR4NsfVuDO30OBX39QgQd//gJXf0iBzftlxMGLP6DA6PyzXwP3/tUFJv2ZCzz6VxaY8ScucBgf6/sG789aYHz+q66Bqc8/6k/Caf/iAgvnn/MamPMvLLDiz1dg3r+owKo/XYHD0rFmfxIm+HMVWDr/BddAkj9TgTX/zAKJ/jwF1v2zCiT7sxRI8c8okOHPUSDNP7lAlj9DgVT/xAKZ/vbfCdP9kwrk+xtfAzn+CQUK/G0L5PmvFijyNy1wyD3WxQKF/nYFcs//SoFif6sCJf4LBZZ//xMWKPOfLVBx/m0KlPrPFKj071+g3H+yQLV/7wI1/hP3BwD+nxy9+I+ugarPvyuvOy/+DwUw5x+5It/c/+5o3fkPR+jx+vPfvUKO+OeTEPT339Efe878nX9sAZ/+uAJ7p/6wAn+8+sMKuPUnKmDkT1PAzJ+kgKE/RQFTf4ICxv7mBcz9jQsQ+JsWoPA3LEDib1aAxt+oAJG/SQEqf4MCZP7dC9D5dy5A6N+1AKV/xwKk/t0K0Pp3KkDs36UAtX+HAuT+zQvQ+zcu4MC/aQEX/g0LOPFvVsCNf6MCjvybFHDl36CAM394AXf+4AIO/aEFXPoDCzj1H4b9GeJ/3jv1j34FRP8MiP6/QPTvAdG/CUb/LRD912D0+wHR7whFvycY/a5w9HWB6CtD0dcGo68OR38+IPoTItGfEYr+lFj05wSjPyka/Vnh6E+LR39fIPobI9HfGYr+1lj09wajvzka/d3h6G+PR98/IPoOEtH3EAH5n70WiL6PUPSdpKLvJYY9Zn8F0EfsrQD+eH0VaHG0ngq0OVY/BUC7aY6O1E2BLWA/2VY7S/cpAN5RN2SBNrvL+ykwe4SgAu33164r0GbCxJWPl+3AXKDNjJFb/x577INnKwAL9JoxAJ6uASvQb8YCeL4KqEDPGRPgCTuQAuwzNtpMm7Pyh0/Zqi7APmenzcRJS3/4pL2qAuyzttpMnbX2h0/bLC5gN28PPG+1sAD7xMU2s8c5/OEzlwsKWM+dBU/dzi7APne34g6NmwnsSwWq7lAlFGCfvV15h261APv09eo7lCsFWPznCgDu0C4W4PGfLgC5Q71QgMl/qgDoDv1sAS7/cQHYCsVMATb/xwLAFZrJAnz+9wWgK1QTBRj9bwuAV+hGBTj9rwXgK5QPBVj9fws0WKG9K8Dr/12gyQr1TQFm/0+Op02Tf/d/AXL/Ydtqff6nALt/Q74KBPb/KhDafxg2p+MQm912EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCJPEX7vve6AkDdfcAAAAASUVORK5CYII=);
-        width: 73px;
-        height: 73px;
-        background-size: 73px;
+        width: 80px;
+        height: 88px;
+        background-size: 90px;
         padding: 0px 5px 0px 0px;
         opacity: 0;
         filter: alpha(opacity=0);
@@ -46,6 +46,7 @@
         margin: 0 auto;
         position: relative;
         top: 0px;
+        width: 100%;
       }
 
       #nav {
@@ -78,8 +79,6 @@
         cursor: pointer;
       }
       td {
-        padding-left: 5;
-        padding-right: 5;
         margin: 0;
         border: 0px none;
       }
@@ -90,7 +89,7 @@
       #nav a {
         text-decoration: none;
         color: #333;
-        font-family: arial, sans;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 12px;
       }
       #nav a:hover {
@@ -112,19 +111,23 @@
       .bingo-card-id-main,
       .bingo-card-id-main a {
         text-align: left;
-        font-family: monospace;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 18px;
         color: #666;
         text-decoration: none;
       }
       #new-card {
-        font-family: Gotham;
+        font-family: 'Ubuntu', sans-serif;
         text-decoration: underline;
+        position: absolute;
+        padding-top: 10px;
+        color: #737491;
       }
       #new-card:hover {
         color: #222;
       }
       .bingo-card-id-main {
+        position: relative;
         width: 468px;
         margin: 0 auto 10px;
         display: flex;
@@ -182,12 +185,16 @@
         display: none;
       }
     </style>
-    <meta name="viewport" content="width=468, user-scalable=yes" />
+    
     <title>Let's Bingo</title>
     <meta
       name="description"
-      content="Let's Bingo"
+      content="Lets Bingo Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! Completely free bingo app - no downloads necessary!"
     />
+    <meta name="keywords"
+    content="virtual bingo, bingo, free online bingo caller, free bingo caller, bingo caller, host your own bingo games, bingo games at home, free bingo app no downloads, bingo board" />
+  <meta name="author" content="Aditya Karnik" />
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
   </head>
   <body>
     <div class="print-image bingo-card-id">Bingo Card ID 8</div>
@@ -195,11 +202,7 @@
     <div class="main">
       <div class="wrapper free-card-rand">
         <style>
-          @font-face {
-            font-family: Gotham;
-            font-display: swap;
-            src:url("font\\Gotham-Book.otf");
-          }
+          
           #zoom {
             font-size: 16px;
             padding: 2px;
@@ -213,7 +216,7 @@
             margin: 0 auto;
             font-weight: bold;
             color: #fff;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
             background: #ff6666;
             padding: 0 15px;
             border: 0px none;
@@ -237,7 +240,7 @@
             background-position: 10px center;
             background-size: 25px;
             min-height: 38px;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
             font-weight: bold;
             font-size: 15px;
             width: 100%;
@@ -265,11 +268,11 @@
           body {
             padding: 0;
             margin: 0;
-            font-family: arial;
+            font-family: 'Ubuntu', sans-serif;
           }
           @media only screen {
             body {
-              background: #dbecf4;
+              background: #000000;
             }
             html {
               overflow-x: hidden;
@@ -293,10 +296,10 @@
             overflow: hidden;
           }
         </style>
-        <div class="bingo-card-id-main">
+        <div id="loader-holder">
+          <div class="bingo-card-id-main">
             <span id="new-card">Reset</span>
         </div>
-        <div id="loader-holder">
           <div
             id="bingo-holder"
             style='background-image: url("../assets/images/8.PNG"); padding-top: 100px;'
